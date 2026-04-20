@@ -53,6 +53,12 @@ Outputs:
 Rscript scripts/01_preprocess_redlist_input.R
 ```
 
+To preprocess an alternative raw file (e.g. toy/demo data), set `RAW_OCC_PATH`:
+
+```bash
+RAW_OCC_PATH=main/toy_data/fungal_occurences_Vlaanderen.csv Rscript scripts/01_preprocess_redlist_input.R
+```
+
 Outputs:
 
 - `app_data/records_clean.rds`

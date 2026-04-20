@@ -20,11 +20,11 @@ normalize_occurrence_fields <- function(raw_df) {
   clean <- raw_df %>%
     transmute(
       record_id = as.character(key),
-      species_working = coalesce(species, 'Unknown species'),
+      species_working = coalesce(species, accepted_name_resolved, scientificName, 'Unknown species'),
       observation_date = suppressWarnings(as.Date(eventDate)),
       year = as.integer(format(observation_date, '%Y')),
-      decimalLongitude = as.numeric(decimalLongitude),
-      decimalLatitude = as.numeric(decimalLatitude),
+      decimalLongitude = suppressWarnings(readr::parse_number(as.character(decimalLongitude), locale = readr::locale(decimal_mark = ','))),
+      decimalLatitude = suppressWarnings(readr::parse_number(as.character(decimalLatitude), locale = readr::locale(decimal_mark = ','))),
       source_dataset = coalesce(datasetName, 'GBIF unknown dataset'),
       exclusion_flag = is.na(decimalLongitude) | is.na(decimalLatitude) | is.na(year),
       exclusion_reason = case_when(
@@ -69,12 +69,14 @@ write_app_data_outputs <- function(records_clean, records_analysis, species_mast
 }
 
 main <- function() {
-  raw_path <- 'data_raw/gbif/occurrences_raw.csv'
+  raw_path <- Sys.getenv('RAW_OCC_PATH', unset = 'data_raw/gbif/occurrences_raw.csv')
   if (!file.exists(raw_path)) {
     stop(sprintf('Missing critical input file: %s. Run scripts/00_fetch_gbif_occurrences.R first.', raw_path))
   }
 
-  raw <- read_csv(raw_path, show_col_types = FALSE)
+  first_line <- readLines(raw_path, n = 1, warn = FALSE)
+  delim <- if (grepl(';', first_line, fixed = TRUE)) ';' else ','
+  raw <- read_delim(raw_path, delim = delim, show_col_types = FALSE, locale = locale(decimal_mark = ','))
 
   records_clean <- normalize_occurrence_fields(raw)
   records_analysis <- derive_analysis_grids(records_clean)
