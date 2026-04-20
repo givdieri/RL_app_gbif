@@ -17,14 +17,18 @@ normalize_occurrence_fields <- function(raw_df) {
     stop(sprintf('normalize_occurrence_fields: missing required columns: %s', paste(missing, collapse = ', ')))
   }
 
+  species_col <- if ('species' %in% names(raw_df)) as.character(raw_df$species) else rep(NA_character_, nrow(raw_df))
+  accepted_col <- if ('accepted_name_resolved' %in% names(raw_df)) as.character(raw_df$accepted_name_resolved) else rep(NA_character_, nrow(raw_df))
+  scientific_col <- if ('scientificName' %in% names(raw_df)) as.character(raw_df$scientificName) else rep(NA_character_, nrow(raw_df))
+
   clean <- raw_df %>%
     transmute(
       record_id = as.character(key),
-      species_working = coalesce(species, accepted_name_resolved, scientificName, 'Unknown species'),
+      species_working = coalesce(species_col, accepted_col, scientific_col, 'Unknown species'),
       observation_date = suppressWarnings(as.Date(eventDate)),
       year = as.integer(format(observation_date, '%Y')),
-      decimalLongitude = suppressWarnings(readr::parse_number(as.character(decimalLongitude), locale = readr::locale(decimal_mark = ','))),
-      decimalLatitude = suppressWarnings(readr::parse_number(as.character(decimalLatitude), locale = readr::locale(decimal_mark = ','))),
+      decimalLongitude = suppressWarnings(as.numeric(str_replace_all(as.character(decimalLongitude), ',', '.'))),
+      decimalLatitude = suppressWarnings(as.numeric(str_replace_all(as.character(decimalLatitude), ',', '.'))),
       source_dataset = coalesce(datasetName, 'GBIF unknown dataset'),
       exclusion_flag = is.na(decimalLongitude) | is.na(decimalLatitude) | is.na(year),
       exclusion_reason = case_when(
