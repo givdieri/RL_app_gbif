@@ -1,0 +1,13 @@
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+*.Rproj
+
+# generated data
+/data_raw/
+/app_data/
+
+# logs/temp
+*.log
+/tmp/
