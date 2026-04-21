@@ -381,3 +381,4 @@ main <- function() {
 if (identical(environment(), globalenv())) {
   main()
 }
+warnings()
