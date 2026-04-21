@@ -1,0 +1,16 @@
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+*.Rproj
+
+# generated data
+/data_raw/
+/app_data/
+
+# logs/temp
+*.log
+/tmp/
+
+# local toy/sample data (no longer used by pipeline)
+/main/toy_data/
