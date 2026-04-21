@@ -103,13 +103,18 @@ derive_analysis_grids <- function(clean_df) {
     env_paths <- if (nzchar(env_path)) str_split(env_path, ';|,')[[1]] |> str_trim() else character(0)
     env_paths <- env_paths[file.exists(env_paths)]
 
-    discovered <- c(
-      file.path('spatial', 'ifbl04x04.shp'),
-      file.path('spatial', 'IFBL_kwartierhokken.kml'),
+    candidate_paths <- c(
+      file.path('spatial', 'ifbl_grid.shp'),
+      file.path('spatial', 'ifbl_grid.kml'),
+      file.path('legacy_code', 'ifbl04x04.shp'),
+      file.path('legacy_code', 'IFBL_kwartierhokken.kml'),
+      file.path('data_aux', 'ifbl', 'ifbl_grid.shp'),
+      file.path('data_aux', 'ifbl', 'ifbl_grid.kml'),
       list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE),
       list.files('spatial', pattern = '\\\\.kml$', full.names = TRUE)
     )
-    discovered <- unique(discovered[file.exists(discovered)])
+    discovered <- unique(candidate_paths[file.exists(candidate_paths)])
+    attr(discovered, 'candidate_paths') <- unique(candidate_paths)
     unique(c(env_paths, discovered))
   }
 
@@ -131,7 +136,18 @@ derive_analysis_grids <- function(clean_df) {
 
   grid_paths <- discover_ifbl_grid_paths()
   if (length(grid_paths) == 0) {
-    stop('No IFBL grid file found. Provide spatial/ifbl_grid.shp, spatial/ifbl_grid.kml, or IFBL_GRID_PATH.')
+    candidate_paths <- attr(grid_paths, 'candidate_paths')
+    if (is.null(candidate_paths)) candidate_paths <- character(0)
+    stop(sprintf(
+      paste(
+        'No IFBL grid file found.',
+        'cwd=%s',
+        'Checked candidates: %s',
+        'Provide spatial/ifbl_grid.shp, spatial/ifbl_grid.kml, legacy_code/*, or IFBL_GRID_PATH.'
+      ),
+      getwd(),
+      ifelse(length(candidate_paths) > 0, paste(candidate_paths, collapse = '; '), '<none>')
+    ))
   }
 
   kept$ifbl_uurhok <- NA_character_
