@@ -77,12 +77,8 @@ get_default_geo_cfg <- function() {
     env_paths <- env_paths[file.exists(env_paths)]
 
     discovered <- c(
-      file.path('spatial', 'ifbl_grid.shp'),
-      file.path('spatial', 'ifbl_grid.kml'),
-      file.path('legacy_code', 'ifbl04x04.shp'),
-      file.path('legacy_code', 'IFBL_kwartierhokken.kml'),
-      file.path('data_aux', 'ifbl', 'ifbl_grid.shp'),
-      file.path('data_aux', 'ifbl', 'ifbl_grid.kml'),
+      file.path('spatial', 'ifbl04x04.shp'),
+      file.path('spatial', 'IFBL_kwartierhokken.kml'),
       list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE),
       list.files('spatial', pattern = '\\\\.kml$', full.names = TRUE)
     )
@@ -101,7 +97,7 @@ get_default_geo_cfg <- function() {
       if (is.null(geom_4326)) next
       merged <- tryCatch(st_union(geom_4326), error = function(e) NULL)
       if (is.null(merged)) next
-      return(st_as_sfc(merged))
+      return(merged)
     }
     NULL
   }
@@ -446,7 +442,7 @@ main <- function() {
       taxon_keys = matched$occ_taxonKey,
       geo_cfg = geo_cfg,
       page_size = as.integer(Sys.getenv('GBIF_PAGE_SIZE', unset = 100)),
-      max_pages = as.integer(Sys.getenv('GBIF_MAX_PAGES', unset = 30)),
+      max_pages = as.integer(Sys.getenv('GBIF_MAX_PAGES', unset = 300)),
       dataset_keys = supplemental_dataset_keys
     )
   }
