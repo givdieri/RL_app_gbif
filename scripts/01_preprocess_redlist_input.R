@@ -2,6 +2,7 @@
 
 suppressPackageStartupMessages({
   library(dplyr)
+  library(purrr)
   library(readr)
   library(stringr)
   library(tibble)
@@ -20,6 +21,36 @@ log_df_structure <- function(df, label, preview_cols = 12) {
     '[df_debug] %s -> rows=%s cols=%s col_names=[%s] col_types=[%s]',
     label, nrow(df), ncol(df), head_cols, type_pairs
   ))
+}
+
+parse_decimal_mixed <- function(x) {
+  x_chr <- as.character(x)
+  x_chr <- stringr::str_replace_all(x_chr, fixed('\u00A0'), '')
+  x_chr <- stringr::str_replace_all(x_chr, '\\s+', '')
+  x_chr[x_chr == ''] <- NA_character_
+
+  both_idx <- !is.na(x_chr) & stringr::str_detect(x_chr, ',') & stringr::str_detect(x_chr, '\\.')
+  last_sep_pos <- function(vec, sep_pattern) {
+    purrr::map_int(stringr::str_locate_all(vec, sep_pattern), function(mat) {
+      if (is.null(mat) || nrow(mat) == 0) return(NA_integer_)
+      max(mat[, 1], na.rm = TRUE)
+    })
+  }
+  comma_last <- last_sep_pos(x_chr, ',')
+  dot_last <- last_sep_pos(x_chr, '\\.')
+  comma_decimal_idx <- both_idx & !is.na(comma_last) & !is.na(dot_last) & (comma_last > dot_last)
+
+  out <- x_chr
+  out[comma_decimal_idx] <- stringr::str_replace_all(out[comma_decimal_idx], '\\.', '')
+  out[comma_decimal_idx] <- stringr::str_replace_all(out[comma_decimal_idx], ',', '.')
+
+  dot_decimal_idx <- both_idx & !comma_decimal_idx
+  out[dot_decimal_idx] <- stringr::str_replace_all(out[dot_decimal_idx], ',', '')
+
+  comma_only_idx <- !is.na(out) & stringr::str_detect(out, ',') & !stringr::str_detect(out, '\\.')
+  out[comma_only_idx] <- stringr::str_replace_all(out[comma_only_idx], ',', '.')
+
+  suppressWarnings(as.numeric(out))
 }
 
 normalize_occurrence_fields <- function(raw_df) {
@@ -41,13 +72,15 @@ normalize_occurrence_fields <- function(raw_df) {
       species_working = coalesce(species_col, accepted_col, scientific_col, 'Unknown species'),
       observation_date = suppressWarnings(as.Date(eventDate)),
       year = as.integer(format(observation_date, '%Y')),
-      decimalLongitude = suppressWarnings(as.numeric(str_replace_all(as.character(decimalLongitude), ',', '.'))),
-      decimalLatitude = suppressWarnings(as.numeric(str_replace_all(as.character(decimalLatitude), ',', '.'))),
+      decimalLongitude = parse_decimal_mixed(decimalLongitude),
+      decimalLatitude = parse_decimal_mixed(decimalLatitude),
       source_dataset = coalesce(datasetName, 'GBIF unknown dataset'),
-      exclusion_flag = is.na(decimalLongitude) | is.na(decimalLatitude) | is.na(year),
+      exclusion_flag = is.na(decimalLongitude) | is.na(decimalLatitude) | is.na(year) |
+        abs(decimalLongitude) > 180 | abs(decimalLatitude) > 90,
       exclusion_reason = case_when(
         is.na(year) ~ 'missing_or_invalid_date',
         is.na(decimalLongitude) | is.na(decimalLatitude) ~ 'missing_coordinates',
+        abs(decimalLongitude) > 180 | abs(decimalLatitude) > 90 ~ 'invalid_coordinate_range',
         TRUE ~ NA_character_
       ),
       quality_flag = if_else(exclusion_flag, 'excluded', 'ok')
@@ -163,12 +196,10 @@ main <- function() {
 
   first_line <- readLines(raw_path, n = 1, warn = FALSE)
   delim <- if (grepl(';', first_line, fixed = TRUE)) ';' else ','
-  raw <- read_delim(raw_path, delim = delim, show_col_types = FALSE, locale = locale(decimal_mark = ','))
+  raw <- read_delim(raw_path, delim = delim, show_col_types = FALSE, col_types = cols(.default = col_character()))
   log_df_structure(raw, 'main.raw_input')
 
   records_clean <- normalize_occurrence_fields(raw)
-  print( "showing structure of records_clean")
-  str(records_clean)
   analysis_result <- derive_analysis_grids(records_clean)
   records_analysis <- analysis_result$analysis
 
