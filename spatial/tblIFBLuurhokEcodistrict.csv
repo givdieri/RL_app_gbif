@@ -1,0 +1,984 @@
+IFBL;IFBLuurhok;Xcoord;Ycoord;REGIO;DISTRICT;area;max
+C056;c0-56;24012.000000;200180.000000;Ecoregio van de kustduinen;Kustduinendistrict;7154557.496079;y
+C057;c0-57;28012.000000;200180.000000;Ecoregio van de kustduinen;Kustduinendistrict;9183017.355726;y
+C047;c0-47;28012.000000;204180.000000;Ecoregio van de kustduinen;Kustduinendistrict;1716137.776762;y
+C048;c0-48;32012.000000;204180.000000;Ecoregio van de kustduinen;Kustduinendistrict;8824173.834634;y
+C131;c1-31;36012.000000;208180.000000;Ecoregio van de kustduinen;Kustduinendistrict;1723252.812917;y
+C122;c1-22;40012.000000;212180.000000;Ecoregio van de kustduinen;Kustduinendistrict;10258.027653;y
+B156;b1-56;56012.000000;220180.000000;Ecoregio van de kustduinen;Kustduinendistrict;3667466.830310;y
+B231;b2-31;68012.000000;228180.000000;Ecoregio van de kustduinen;Kustduinendistrict;285812.764358;y
+B232;b2-32;72012.000000;228180.000000;Ecoregio van de kustduinen;Kustduinendistrict;1514232.897160;y
+B233;b2-33;76012.000000;228180.000000;Ecoregio van de kustduinen;Kustduinendistrict;7244286.078379;y
+D141;d1-41;36012.000000;184180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;12243983.527996;y
+D142;d1-42;40012.000000;184180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;11783570.367329;y
+D036;d0-36;24012.000000;188180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;2231514.204297;y
+D131;d1-31;36012.000000;188180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;12363810.273965;y
+D132;d1-32;40012.000000;188180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15886509.710215;y
+D133;d1-33;44012.000000;188180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;8651129.666288;y
+D026;d0-26;24012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;8078323.489030;y
+D027;d0-27;28012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;11463293.468693;y
+D028;d0-28;32012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;10300350.619984;y
+D121;d1-21;36012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;14630240.240666;y
+D122;d1-22;40012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+D123;d1-23;44012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;12167389.882983;y
+D016;d0-16;24012.000000;196180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;8303520.022738;y
+D017;d0-17;28012.000000;196180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15928146.395568;y
+D018;d0-18;32012.000000;196180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+D111;d1-11;36012.000000;196180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+D112;d1-12;40012.000000;196180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+D113;d1-13;44012.000000;196180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;12760445.123181;y
+C058;c0-58;32012.000000;200180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;13932640.969095;y
+C151;c1-51;36012.000000;200180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C152;c1-52;40012.000000;200180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C153;c1-53;44012.000000;200180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15881601.782537;y
+C141;c1-41;36012.000000;204180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;7975172.118021;y
+C142;c1-42;40012.000000;204180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;14676607.717002;y
+C143;c1-43;44012.000000;204180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C144;c1-44;48012.000000;204180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15100923.648742;y
+C145;c1-45;52012.000000;204180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;8246783.974607;y
+C132;c1-32;40012.000000;208180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;8662787.381279;y
+C133;c1-33;44012.000000;208180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15919796.730678;y
+C134;c1-34;48012.000000;208180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C135;c1-35;52012.000000;208180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;14512409.019879;y
+C123;c1-23;44012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;4659883.263019;y
+C124;c1-24;48012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;14401230.614883;y
+C125;c1-25;52012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C126;c1-26;56012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C127;c1-27;60012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C128;c1-28;64012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;12480196.186047;y
+C114;c1-14;48012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;1038304.203599;y
+C115;c1-15;52012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;7068136.591661;y
+C116;c1-16;56012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;13342019.510952;y
+C117;c1-17;60012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15759979.676617;y
+C118;c1-18;64012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C211;c2-11;68012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C212;c2-12;72012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+C213;c2-13;76012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15109321.423886;y
+C214;c2-14;80012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;10384422.553231;y
+B157;b1-57;60012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;12125661.379340;y
+B158;b1-58;64012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+B251;b2-51;68012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+B252;b2-52;72012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+B253;b2-53;76012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;15999999.835363;y
+B254;b2-54;80012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;11097171.596603;y
+B147;b1-47;60012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;728924.173244;y
+B148;b1-48;64012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;6422071.935322;y
+B241;b2-41;68012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;11198752.784689;y
+B242;b2-42;72012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;14640556.518789;y
+B243;b2-43;76012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;14935396.005577;y
+B244;b2-44;80012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;10068699.626418;y
+B234;b2-34;80012.000000;228180.000000;Ecoregio van de polders en de getijdenschelde;Kustpoldersdistrict;4244861.859142;y
+D328;d3-28;128012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;6747681.768632;y
+D421;d4-21;132012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;8212013.199105;y
+D422;d4-22;136012.000000;192180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;8812885.925351;y
+D412;d4-12;136012.000000;196180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;9525009.893867;y
+D416;d4-16;152012.000000;196180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;9270375.483975;y
+C451;c4-51;132012.000000;200180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;5245786.040272;y
+C453;c4-53;140012.000000;200180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;12096317.057305;y
+C454;c4-54;144012.000000;200180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;8712115.476889;y
+C435;c4-35;148012.000000;208180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;7166237.974870;y
+C325;c3-25;116012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;2373528.966244;y
+C425;c4-25;148012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;9657435.125336;y
+C426;c4-26;152012.000000;212180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;10989131.239525;y
+C217;c2-17;92012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;7428374.099361;y
+C218;c2-18;96012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;9261474.246041;y
+C311;c3-11;100012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;8226619.575512;y
+C312;c3-12;104012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;10052698.277199;y
+C313;c3-13;108012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;11527942.493311;y
+C411;c4-11;132012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;10381277.826801;y
+C412;c4-12;136012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;10385046.050128;y
+C413;c4-13;140012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;15964816.391609;y
+C414;c4-14;144012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;15999999.835363;y
+C415;c4-15;148012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;15999999.835363;y
+C416;c4-16;152012.000000;216180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;15999999.835363;y
+B257;b2-57;92012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;7024299.327500;y
+B258;b2-58;96012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;11580319.184513;y
+B351;b3-51;100012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;7692859.393191;y
+B352;b3-52;104012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;1366322.047909;y
+B451;b4-51;132012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;536444.807311;y
+B452;b4-52;136012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;10124192.336905;y
+B453;b4-53;140012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;15999999.835363;y
+B454;b4-54;144012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;15999999.835363;y
+B455;b4-55;148012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;15999999.835363;y
+B456;b4-56;152012.000000;220180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;11591183.024201;y
+B442;b4-42;136012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;324166.698104;y
+B443;b4-43;140012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;12299956.763005;y
+B444;b4-44;144012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;15653281.426743;y
+B445;b4-45;148012.000000;224180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;12138944.076693;y
+B433;b4-33;140012.000000;228180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;6017344.445776;y
+B434;b4-34;144012.000000;228180.000000;Ecoregio van de polders en de getijdenschelde;Getijdenschelde- en -poldersdistrict;13121502.528646;y
+F112;f1-12;40012.000000;156180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;1504721.647747;y
+F113;f1-13;44012.000000;156180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;1290187.458007;y
+F213;f2-13;76012.000000;156180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;2117639.141581;y
+F214;f2-14;80012.000000;156180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;2699300.059594;y
+E255;e2-55;84012.000000;160180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;4516847.725401;y
+E145;e1-45;52012.000000;164180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;681695.301673;y
+E146;e1-46;56012.000000;164180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;7938571.776187;y
+E147;e1-47;60012.000000;164180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8237011.140752;y
+E148;e1-48;64012.000000;164180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;4495676.754797;y
+E245;e2-45;84012.000000;164180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8679028.872760;y
+E246;e2-46;88012.000000;164180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;11485347.593769;y
+E138;e1-38;64012.000000;168180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;11165577.159192;y
+E231;e2-31;68012.000000;168180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;13664428.074842;y
+E232;e2-32;72012.000000;168180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8837459.451300;y
+E237;e2-37;92012.000000;168180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;11434293.620970;y
+E222;e2-22;72012.000000;172180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;13747872.692511;y
+E223;e2-23;76012.000000;172180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+E224;e2-24;80012.000000;172180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15775269.619430;y
+E225;e2-25;84012.000000;172180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8556122.124966;y
+E228;e2-28;96012.000000;172180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;9440293.129975;y
+E213;e2-13;76012.000000;176180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;11321562.725956;y
+E214;e2-14;80012.000000;176180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+E215;e2-15;84012.000000;176180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15238073.273346;y
+E311;e3-11;100012.000000;176180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;13414811.635187;y
+D254;d2-54;80012.000000;180180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;14875735.461690;y
+D255;d2-55;84012.000000;180180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D256;d2-56;88012.000000;180180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;14096865.027559;y
+D258;d2-58;96012.000000;180180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15209168.157902;y
+D351;d3-51;100012.000000;180180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;10120048.983848;y
+D245;d2-45;84012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15980604.316421;y
+D246;d2-46;88012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D247;d2-47;92012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D248;d2-48;96012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D341;d3-41;100012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15188975.597591;y
+D447;d4-47;156012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;7530980.876141;y
+D542;d5-42;168012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;11476732.697703;y
+D543;d5-43;172012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;14880135.142517;y
+D544;d5-44;176012.000000;184180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;11600255.705321;y
+D236;d2-36;88012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8055450.003621;y
+D237;d2-37;92012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;13790665.437407;y
+D238;d2-38;96012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D331;d3-31;100012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D332;d3-32;104012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;14977011.815986;y
+D334;d3-34;112012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8481791.357177;y
+D435;d4-35;148012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;9686624.551620;y
+D436;d4-36;152012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D437;d4-37;156012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D438;d4-38;160012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D531;d5-31;164012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D532;d5-32;168012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D533;d5-33;172012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15325196.533115;y
+D534;d5-34;176012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8419769.008453;y
+D228;d2-28;96012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D321;d3-21;100012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D322;d3-22;104012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15750807.439907;y
+D323;d3-23;108012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8717293.642618;y
+D324;d3-24;112012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D325;d3-25;116012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15361874.423247;y
+D326;d3-26;120012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;10221288.133330;y
+D327;d3-27;124012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8253490.100067;y
+D423;d4-23;140012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15498092.587442;y
+D424;d4-24;144012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D425;d4-25;148012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D426;d4-26;152012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;14438471.026243;y
+D427;d4-27;156012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;12137342.741739;y
+D428;d4-28;160012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;12427306.939136;y
+D216;d2-16;88012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;13290275.337588;y
+D217;d2-17;92012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;10146568.527097;y
+D218;d2-18;96012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D311;d3-11;100012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D312;d3-12;104012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D313;d3-13;108012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D314;d3-14;112012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D315;d3-15;116012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D316;d3-16;120012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D317;d3-17;124012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+D318;d3-18;128012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15967491.128527;y
+D411;d4-11;132012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15755067.814840;y
+D413;d4-13;140012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15475527.531175;y
+D414;d4-14;144012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15996876.937131;y
+D415;d4-15;148012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8830383.876251;y
+C254;c2-54;80012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8803879.531365;y
+C255;c2-55;84012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15166689.037715;y
+C256;c2-56;88012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15734753.340328;y
+C257;c2-57;92012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;11363595.427110;y
+C258;c2-58;96012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15954163.485529;y
+C351;c3-51;100012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C352;c3-52;104012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C353;c3-53;108012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C354;c3-54;112012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C355;c3-55;116012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C356;c3-56;120012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C357;c3-57;124012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;14859614.552016;y
+C358;c3-58;128012.000000;200180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8565602.630650;y
+C241;c2-41;68012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;10751345.466939;y
+C242;c2-42;72012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;9603696.806828;y
+C243;c2-43;76012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;14954720.504842;y
+C244;c2-44;80012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;13544657.431068;y
+C247;c2-47;92012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;8610083.968637;y
+C248;c2-48;96012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C341;c3-41;100012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C342;c3-42;104012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C343;c3-43;108012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C344;c3-44;112012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C345;c3-45;116012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C346;c3-46;120012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C347;c3-47;124012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;15999999.835363;y
+C348;c3-48;128012.000000;204180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;9797197.998598;y
+C232;c2-32;72012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;11115317.424335;y
+C233;c2-33;76012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;9497350.293529;y
+C338;c3-38;128012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Pleistoceen riviervalleiendistrict;7832502.896252;y
+C136;c1-36;56012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;8239253.922736;y
+C137;c1-37;60012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;12866549.792676;y
+C138;c1-38;64012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;12238065.185468;y
+C231;c2-31;68012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;8924971.537293;y
+C237;c2-37;92012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;8274804.060215;y
+C238;c2-38;96012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;11116379.825578;y
+C331;c3-31;100012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;11642125.080707;y
+C332;c3-32;104012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;12589135.171483;y
+C333;c3-33;108012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;11492146.537652;y
+C334;c3-34;112012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;10460119.625274;y
+C335;c3-35;116012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;12954089.374980;y
+C336;c3-36;120012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;12920582.961948;y
+C337;c3-37;124012.000000;208180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;9549115.801341;y
+C221;c2-21;68012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;9106440.800418;y
+C222;c2-22;72012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;11786552.104493;y
+C223;c2-23;76012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;15438365.301104;y
+C224;c2-24;80012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;10523885.181144;y
+C225;c2-25;84012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;11231455.493535;y
+C226;c2-26;88012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;13768848.540426;y
+C227;c2-27;92012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;15999999.835363;y
+C228;c2-28;96012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;15999999.835363;y
+C321;c3-21;100012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;15999999.835363;y
+C322;c3-22;104012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;15464285.045369;y
+C323;c3-23;108012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;10993349.478300;y
+C324;c3-24;112012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;3723528.434867;y
+C326;c3-26;120012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;4006474.265822;y
+C327;c3-27;124012.000000;212180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;14422538.116449;y
+C215;c2-15;84012.000000;216180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;6105454.258006;y
+C216;c2-16;88012.000000;216180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;3973000.712815;y
+C317;c3-17;124012.000000;216180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;1237416.608969;y
+C318;c3-18;128012.000000;216180.000000;Ecoregio van de Pleistocene riviervalleien;Noord-Vlaams dekzandruggendistrict;3534204.652019;y
+D235;d2-35;84012.000000;188180.000000;Ecoregio van de Pleistocene riviervalleien;Zandig Poekebeekdistrict;6914264.845309;y
+D224;d2-24;80012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Zandig Poekebeekdistrict;13855755.636083;y
+D225;d2-25;84012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Zandig Poekebeekdistrict;14894287.947383;y
+D226;d2-26;88012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Zandig Poekebeekdistrict;12808428.519946;y
+D227;d2-27;92012.000000;192180.000000;Ecoregio van de Pleistocene riviervalleien;Zandig Poekebeekdistrict;9318091.432585;y
+D214;d2-14;80012.000000;196180.000000;Ecoregio van de Pleistocene riviervalleien;Zandig Poekebeekdistrict;9942882.683416;y
+D125;d1-25;52012.000000;192180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;9959277.154924;y
+D126;d1-26;56012.000000;192180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;10080994.593939;y
+D114;d1-14;48012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15700145.663962;y
+D115;d1-15;52012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+D116;d1-16;56012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+D117;d1-17;60012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+D118;d1-18;64012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+D211;d2-11;68012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;14030207.028902;y
+D212;d2-12;72012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;12825654.471998;y
+D213;d2-13;76012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15831858.320647;y
+D215;d2-15;84012.000000;196180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;12231736.060149;y
+C154;c1-54;48012.000000;200180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;9398882.202818;y
+C155;c1-55;52012.000000;200180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15982760.446761;y
+C156;c1-56;56012.000000;200180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+C157;c1-57;60012.000000;200180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+C158;c1-58;64012.000000;200180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+C251;c2-51;68012.000000;200180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+C252;c2-52;72012.000000;200180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;15999999.835363;y
+C253;c2-53;76012.000000;200180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;14447101.895494;y
+C146;c1-46;56012.000000;204180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;12657237.601597;y
+C147;c1-47;60012.000000;204180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;14835446.745214;y
+C148;c1-48;64012.000000;204180.000000;Ecoregio van de cuesta's;Zandig Houtlandcuestadistrict;13357076.464041;y
+C245;c2-45;84012.000000;204180.000000;Ecoregio van de cuesta's;Zandig Maldegems cuestadistrict;13189270.060373;y
+C246;c2-46;88012.000000;204180.000000;Ecoregio van de cuesta's;Zandig Maldegems cuestadistrict;15619290.310432;y
+C234;c2-34;80012.000000;208180.000000;Ecoregio van de cuesta's;Zandig Maldegems cuestadistrict;14745155.497315;y
+C235;c2-35;84012.000000;208180.000000;Ecoregio van de cuesta's;Zandig Maldegems cuestadistrict;10413968.133092;y
+C236;c2-36;88012.000000;208180.000000;Ecoregio van de cuesta's;Zandig Maldegems cuestadistrict;15280525.437353;y
+C441;c4-41;132012.000000;204180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;15650872.290805;y
+C442;c4-42;136012.000000;204180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;11791724.554895;y
+C431;c4-31;132012.000000;208180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;15999999.835363;y
+C432;c4-32;136012.000000;208180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;15999999.835363;y
+C433;c4-33;140012.000000;208180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;14663439.989621;y
+C434;c4-34;144012.000000;208180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;12566940.771706;y
+C328;c3-28;128012.000000;212180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;10262661.339414;y
+C421;c4-21;132012.000000;212180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;10723791.237215;y
+C422;c4-22;136012.000000;212180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;11375604.019493;y
+C423;c4-23;140012.000000;212180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;11473334.104974;y
+C424;c4-24;144012.000000;212180.000000;Ecoregio van de cuesta's;Westelijk zandig Booms cuestadistrict;11941923.016723;y
+D417;d4-17;156012.000000;196180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;8466644.680691;y
+C452;c4-52;136012.000000;200180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;7170932.629888;y
+C455;c4-55;148012.000000;200180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;12402484.543186;y
+C456;c4-56;152012.000000;200180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15999999.835363;y
+C457;c4-57;156012.000000;200180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15999999.835363;y
+C458;c4-58;160012.000000;200180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15130934.446027;y
+C551;c5-51;164012.000000;200180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;14470884.426188;y
+C552;c5-52;168012.000000;200180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;13551184.812342;y
+C443;c4-43;140012.000000;204180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;11660859.433513;y
+C444;c4-44;144012.000000;204180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;13547792.975412;y
+C445;c4-45;148012.000000;204180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;9737314.792190;y
+C446;c4-46;152012.000000;204180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15999999.835363;y
+C447;c4-47;156012.000000;204180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15999999.835363;y
+C448;c4-48;160012.000000;204180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15999999.835363;y
+C541;c5-41;164012.000000;204180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;10990484.982164;y
+C436;c4-36;152012.000000;208180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15999896.471627;y
+C437;c4-37;156012.000000;208180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15999999.835363;y
+C438;c4-38;160012.000000;208180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15848579.796933;y
+C531;c5-31;164012.000000;208180.000000;Ecoregio van de cuesta's;Zandlemig Booms cuestadistrict;15923090.727610;y
+D535;d5-35;180012.000000;188180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;8962090.020609;y
+D521;d5-21;164012.000000;192180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;8417690.121103;y
+D522;d5-22;168012.000000;192180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;12759864.166938;y
+D523;d5-23;172012.000000;192180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;15220045.141701;y
+D524;d5-24;176012.000000;192180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;15999999.835363;y
+D525;d5-25;180012.000000;192180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;15952865.033658;y
+D418;d4-18;160012.000000;196180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;13683156.136282;y
+D511;d5-11;164012.000000;196180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;14203688.413328;y
+D512;d5-12;168012.000000;196180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;11521164.750959;y
+D513;d5-13;172012.000000;196180.000000;Ecoregio van de cuesta's;Oostelijk zandig Booms cuestadistrict;9280832.887070;y
+B551;b5-51;164012.000000;220180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;8490012.528444;y
+B552;b5-52;168012.000000;220180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;14586624.335065;y
+B553;b5-53;172012.000000;220180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;8428059.614790;y
+B448;b4-48;160012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;10717142.418911;y
+B541;b5-41;164012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B542;b5-42;168012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B543;b5-43;172012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B544;b5-44;176012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B545;b5-45;180012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15650197.445816;y
+B546;b5-46;184012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;12515834.822251;y
+B547;b5-47;188012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;10874506.083340;y
+B548;b5-48;192012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;9239110.981681;y
+B641;b6-41;196012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;14259070.893994;y
+B642;b6-42;200012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;14239339.487843;y
+B643;b6-43;204012.000000;224180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;4066848.256679;y
+B436;b4-36;152012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;4725278.124860;y
+B437;b4-37;156012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15612332.634919;y
+B438;b4-38;160012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B531;b5-31;164012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B532;b5-32;168012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B533;b5-33;172012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B534;b5-34;176012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B535;b5-35;180012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B536;b5-36;184012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B537;b5-37;188012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B538;b5-38;192012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B631;b6-31;196012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B632;b6-32;200012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;14391391.385050;y
+B633;b6-33;204012.000000;228180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;1297755.245887;y
+B426;b4-26;152012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;6598173.594213;y
+B427;b4-27;156012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B428;b4-28;160012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B521;b5-21;164012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B522;b5-22;168012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B523;b5-23;172012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B524;b5-24;176012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999775.131718;y
+B525;b5-25;180012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;13914006.038374;y
+B526;b5-26;184012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;14770141.625487;y
+B527;b5-27;188012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;11179835.424027;y
+B528;b5-28;192012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15640118.939686;y
+B621;b6-21;196012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B622;b6-22;200012.000000;232180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;6134366.190472;y
+B416;b4-16;152012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;9798666.036432;y
+B417;b4-17;156012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15999999.835363;y
+B418;b4-18;160012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;13946475.506585;y
+B511;b5-11;164012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;5643657.717726;y
+B512;b5-12;168012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;4120689.160874;y
+B513;b5-13;172012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;12817883.547609;y
+B514;b5-14;176012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15769743.500328;y
+B515;b5-15;180012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;10120978.888736;y
+B516;b5-16;184012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;177789.063621;y
+B517;b5-17;188012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;2105495.588936;y
+B518;b5-18;192012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;5325373.806544;y
+B611;b6-11;196012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15798002.271343;y
+B612;b6-12;200012.000000;236180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;10696669.713715;y
+A456;a4-56;152012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;1187257.481724;y
+A457;a4-57;156012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;7846813.897111;y
+A458;a4-58;160012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;11460006.578656;y
+A551;a5-51;164012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;376540.726610;y
+A553;a5-53;172012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;1731947.092022;y
+A554;a5-54;176012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;14248447.438523;y
+A555;a5-55;180012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;15547446.045335;y
+A556;a5-56;184012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;1999549.456069;y
+A557;a5-57;188012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;9445.527667;y
+A558;a5-58;192012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;37827.188353;y
+A651;a6-51;196012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;10176787.199643;y
+A652;a6-52;200012.000000;240180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;3995758.385574;y
+A544;a5-44;176012.000000;244180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;2414325.287080;y
+A545;a5-45;180012.000000;244180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;3801590.681358;y
+A641;a6-41;196012.000000;244180.000000;Ecoregio van de Kempen;Noord-Kempisch kleisubstraatdistrict;510.072361;y
+E711;e7-11;228012.000000;176180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;7768858.988602;y
+E712;e7-12;232012.000000;176180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;10475282.732784;y
+D657;d6-57;220012.000000;180180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;8786033.583519;y
+D658;d6-58;224012.000000;180180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15257705.187620;y
+D751;d7-51;228012.000000;180180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15900964.763945;y
+D643;d6-43;204012.000000;184180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;8273619.139813;y
+D644;d6-44;208012.000000;184180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15200486.009599;y
+D645;d6-45;212012.000000;184180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15983495.068449;y
+D646;d6-46;216012.000000;184180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+D647;d6-47;220012.000000;184180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+D648;d6-48;224012.000000;184180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;10711330.604364;y
+D635;d6-35;212012.000000;188180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;11204290.091335;y
+D636;d6-36;216012.000000;188180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+D637;d6-37;220012.000000;188180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;12551305.480669;y
+D625;d6-25;212012.000000;192180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;14995614.403796;y
+D626;d6-26;216012.000000;192180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;14054678.306947;y
+D515;d5-15;180012.000000;196180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;14361142.924406;y
+D516;d5-16;184012.000000;196180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;10920329.840672;y
+D614;d6-14;208012.000000;196180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15673156.749560;y
+D615;d6-15;212012.000000;196180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15705880.457518;y
+C553;c5-53;172012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;9919527.142123;y
+C554;c5-54;176012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C555;c5-55;180012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C556;c5-56;184012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C557;c5-57;188012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C558;c5-58;192012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;14535709.458326;y
+C652;c6-52;200012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;11475022.672093;y
+C653;c6-53;204012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15896276.477486;y
+C654;c6-54;208012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C655;c6-55;212012.000000;200180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;12829199.842016;y
+C542;c5-42;168012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15851145.217883;y
+C543;c5-43;172012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C544;c5-44;176012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C545;c5-45;180012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C546;c5-46;184012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C547;c5-47;188012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C548;c5-48;192012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C641;c6-41;196012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C642;c6-42;200012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C643;c6-43;204012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C644;c6-44;208012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C645;c6-45;212012.000000;204180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;14526804.417897;y
+C532;c5-32;168012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;9184786.774341;y
+C533;c5-33;172012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C534;c5-34;176012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C535;c5-35;180012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C536;c5-36;184012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C537;c5-37;188012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C538;c5-38;192012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C631;c6-31;196012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C632;c6-32;200012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C633;c6-33;204012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C634;c6-34;208012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C635;c6-35;212012.000000;208180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15670600.784702;y
+C427;c4-27;156012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;8232470.063565;y
+C428;c4-28;160012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;13100447.437237;y
+C521;c5-21;164012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;14299496.102266;y
+C522;c5-22;168012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;14205280.766083;y
+C523;c5-23;172012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C524;c5-24;176012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C525;c5-25;180012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C526;c5-26;184012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C527;c5-27;188012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C528;c5-28;192012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C621;c6-21;196012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C622;c6-22;200012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C623;c6-23;204012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C624;c6-24;208012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C625;c6-25;212012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;14501219.398689;y
+C627;c6-27;220012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;12413299.181622;y
+C628;c6-28;224012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15944534.858417;y
+C721;c7-21;228012.000000;212180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;8409806.556605;y
+C417;c4-17;156012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;12081152.409412;y
+C418;c4-18;160012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C511;c5-11;164012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C512;c5-12;168012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15889601.088188;y
+C513;c5-13;172012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15978433.894890;y
+C514;c5-14;176012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C515;c5-15;180012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C516;c5-16;184012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C517;c5-17;188012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C518;c5-18;192012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C611;c6-11;196012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C612;c6-12;200012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C613;c6-13;204012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+C614;c6-14;208012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15949532.754267;y
+C615;c6-15;212012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;13487653.830217;y
+C616;c6-16;216012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;13055367.199572;y
+C617;c6-17;220012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15810373.306822;y
+C618;c6-18;224012.000000;216180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;13211829.291179;y
+B457;b4-57;156012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15022088.119721;y
+B458;b4-58;160012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15380277.633829;y
+B554;b5-54;176012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;13997842.755332;y
+B555;b5-55;180012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15997961.389423;y
+B556;b5-56;184012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+B557;b5-57;188012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+B558;b5-58;192012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+B651;b6-51;196012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15864228.422815;y
+B652;b6-52;200012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+B653;b6-53;204012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15999999.835363;y
+B654;b6-54;208012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;15973833.480261;y
+B655;b6-55;212012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;1638419.611061;y
+B657;b6-57;220012.000000;220180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;969978.096650;y
+B446;b4-46;152012.000000;224180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;12465727.549431;y
+B447;b4-47;156012.000000;224180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;11630151.943212;y
+B644;b6-44;208012.000000;224180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;4969923.385675;y
+B645;b6-45;212012.000000;224180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;167939.567351;y
+B435;b4-35;148012.000000;228180.000000;Ecoregio van de Kempen;Centraal-Kempisch rivier- en duinendistrict;7197276.372894;y
+D536;d5-36;184012.000000;188180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;11954907.240144;y
+D537;d5-37;188012.000000;188180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;9803207.776444;y
+D631;d6-31;196012.000000;188180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;12349644.198280;y
+D632;d6-32;200012.000000;188180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15134023.928343;y
+D633;d6-33;204012.000000;188180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15999999.835363;y
+D634;d6-34;208012.000000;188180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15057199.653647;y
+D526;d5-26;184012.000000;192180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;8550686.690593;y
+D527;d5-27;188012.000000;192180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15999999.835363;y
+D528;d5-28;192012.000000;192180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15999999.835363;y
+D621;d6-21;196012.000000;192180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15999999.835363;y
+D622;d6-22;200012.000000;192180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15999999.835363;y
+D623;d6-23;204012.000000;192180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15999999.835363;y
+D624;d6-24;208012.000000;192180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;12368843.873922;y
+D514;d5-14;176012.000000;196180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;5833069.052879;y
+D517;d5-17;188012.000000;196180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;10380665.576367;y
+D518;d5-18;192012.000000;196180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;13764087.608494;y
+D611;d6-11;196012.000000;196180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15999999.835363;y
+D612;d6-12;200012.000000;196180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;15858970.192863;y
+D613;d6-13;204012.000000;196180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;10713280.161461;y
+C651;c6-51;196012.000000;200180.000000;Ecoregio van de Kempen;Zuid-Kempisch heuveldistrict;10808132.148255;y
+E713;e7-13;236012.000000;176180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;7137671.423804;y
+D752;d7-52;232012.000000;180180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;9957849.124045;y
+D753;d7-53;236012.000000;180180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15918594.002467;y
+D741;d7-41;228012.000000;184180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;10326096.924283;y
+D742;d7-42;232012.000000;184180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D743;d7-43;236012.000000;184180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D744;d7-44;240012.000000;184180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;8495917.372650;y
+D638;d6-38;224012.000000;188180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15406888.757560;y
+D731;d7-31;228012.000000;188180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D732;d7-32;232012.000000;188180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D733;d7-33;236012.000000;188180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D734;d7-34;240012.000000;188180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;11276336.230620;y
+D627;d6-27;220012.000000;192180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;12460985.602319;y
+D628;d6-28;224012.000000;192180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D721;d7-21;228012.000000;192180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D722;d7-22;232012.000000;192180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D723;d7-23;236012.000000;192180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D724;d7-24;240012.000000;192180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15952960.668746;y
+D616;d6-16;216012.000000;196180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;9976848.520374;y
+D617;d6-17;220012.000000;196180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D618;d6-18;224012.000000;196180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D711;d7-11;228012.000000;196180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D712;d7-12;232012.000000;196180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D713;d7-13;236012.000000;196180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+D714;d7-14;240012.000000;196180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15545667.959816;y
+C656;c6-56;216012.000000;200180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15814338.970400;y
+C657;c6-57;220012.000000;200180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+C658;c6-58;224012.000000;200180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+C751;c7-51;228012.000000;200180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+C752;c7-52;232012.000000;200180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+C753;c7-53;236012.000000;200180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+C646;c6-46;216012.000000;204180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;12940619.460730;y
+C647;c6-47;220012.000000;204180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+C648;c6-48;224012.000000;204180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+C741;c7-41;228012.000000;204180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;15999999.835363;y
+C742;c7-42;232012.000000;204180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;13996715.853580;y
+C636;c6-36;216012.000000;208180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;13076480.117071;y
+C637;c6-37;220012.000000;208180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;14685769.678744;y
+C638;c6-38;224012.000000;208180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;11670718.728882;y
+C731;c7-31;228012.000000;208180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;10043289.965108;y
+C626;c6-26;216012.000000;212180.000000;Ecoregio van de Kempen;Oost-Kempisch puinwaaierdistrict;8223175.861008;y
+C754;c7-54;240012.000000;200180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;8121649.482686;y
+C743;c7-43;236012.000000;204180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;11666128.440907;y
+C744;c7-44;240012.000000;204180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;15981056.833700;y
+C745;c7-45;244012.000000;204180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;14908953.956077;y
+C732;c7-32;232012.000000;208180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;11813562.527317;y
+C733;c7-33;236012.000000;208180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;15999999.835363;y
+C734;c7-34;240012.000000;208180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;13719396.350003;y
+C735;c7-35;244012.000000;208180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;11655163.552295;y
+C736;c7-36;248012.000000;208180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;4684961.980994;y
+C722;c7-22;232012.000000;212180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;15020222.484141;y
+C723;c7-23;236012.000000;212180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;7624115.633884;y
+C724;c7-24;240012.000000;212180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;1337493.151704;y
+C711;c7-11;228012.000000;216180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;15219323.158128;y
+C712;c7-12;232012.000000;216180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;11675801.220188;y
+B658;b6-58;224012.000000;220180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;2465157.142432;y
+B751;b7-51;228012.000000;220180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;11556106.332175;y
+B752;b7-52;232012.000000;220180.000000;Ecoregio van de Kempen;Roerdalslenkdistrict;3197321.970312;y
+D754;d7-54;240012.000000;180180.000000;Ecoregio van de Kempen;Zandig Maasterrassendistrict;12019537.419515;y
+D735;d7-35;244012.000000;188180.000000;Ecoregio van de Kempen;Zandig Maasterrassendistrict;10014490.991098;y
+D725;d7-25;244012.000000;192180.000000;Ecoregio van de Kempen;Zandig Maasterrassendistrict;11344391.050894;y
+D715;d7-15;244012.000000;196180.000000;Ecoregio van de Kempen;Zandig Maasterrassendistrict;13689511.350858;y
+C755;c7-55;244012.000000;200180.000000;Ecoregio van de Kempen;Zandig Maasterrassendistrict;10500428.430310;y
+C756;c7-56;248012.000000;200180.000000;Ecoregio van de Kempen;Zandig Maasterrassendistrict;12947947.314899;y
+C746;c7-46;248012.000000;204180.000000;Ecoregio van de Kempen;Zandig Maasterrassendistrict;14433501.794112;y
+D158;d1-58;64012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;12765593.204570;y
+D251;d2-51;68012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;15352118.655007;y
+D252;d2-52;72012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;14256519.880270;y
+D253;d2-53;76012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;9694149.130220;y
+D147;d1-47;60012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;8689810.130405;y
+D148;d1-48;64012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;15197858.942289;y
+D241;d2-41;68012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;15684251.024600;y
+D242;d2-42;72012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;15847594.953047;y
+D243;d2-43;76012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;14418517.369985;y
+D244;d2-44;80012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Zandig Mandeldistrict;12061658.592021;y
+E235;e2-35;84012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Zandig Leie-Schelde interfluviumdistrict;9145815.990266;y
+E226;e2-26;88012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Zandig Leie-Schelde interfluviumdistrict;11053901.383177;y
+E216;e2-16;88012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Zandig Leie-Schelde interfluviumdistrict;9439994.992939;y
+D257;d2-57;92012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Zandig Leie-Schelde interfluviumdistrict;8146888.755221;y
+E037;e0-37;28012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;4283540.112453;y
+E038;e0-38;32012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;6698821.644164;y
+E132;e1-32;40012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;11468642.061149;y
+E133;e1-33;44012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;12990226.857513;y
+E134;e1-34;48012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;10945797.029805;y
+E135;e1-35;52012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;10147376.377031;y
+E136;e1-36;56012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;14810595.456780;y
+E137;e1-37;60012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;10370799.405640;y
+E026;e0-26;24012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;551724.734975;y
+E027;e0-27;28012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;13900492.553257;y
+E028;e0-28;32012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E121;e1-21;36012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15994007.821665;y
+E122;e1-22;40012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E123;e1-23;44012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E124;e1-24;48012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E125;e1-25;52012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E126;e1-26;56012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E127;e1-27;60012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E128;e1-28;64012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15709924.617663;y
+E221;e2-21;68012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;10098302.218844;y
+E016;e0-16;24012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;50000.964580;y
+E017;e0-17;28012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15559316.448851;y
+E018;e0-18;32012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E111;e1-11;36012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E112;e1-12;40012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E113;e1-13;44012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E114;e1-14;48012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E115;e1-15;52012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E116;e1-16;56012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+E117;e1-17;60012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15773713.919218;y
+E118;e1-18;64012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;13064607.531447;y
+E211;e2-11;68012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;11750439.612394;y
+E212;e2-12;72012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;9573214.708644;y
+D056;d0-56;24012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;958193.227714;y
+D057;d0-57;28012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15382513.534305;y
+D058;d0-58;32012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;14746653.866083;y
+D151;d1-51;36012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15142053.579346;y
+D152;d1-52;40012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;14872753.926359;y
+D153;d1-53;44012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;14851410.572949;y
+D154;d1-54;48012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15960801.554028;y
+D155;d1-55;52012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D156;d1-56;56012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D157;d1-57;60012.000000;180180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;12409347.911956;y
+D047;d0-47;28012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;10444881.755051;y
+D048;d0-48;32012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;12340522.226297;y
+D143;d1-43;44012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;12464561.292467;y
+D144;d1-44;48012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D145;d1-45;52012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D146;d1-46;56012.000000;184180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15726400.960952;y
+D037;d0-37;28012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15019637.343089;y
+D038;d0-38;32012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D134;d1-34;48012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D135;d1-35;52012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D136;d1-36;56012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D137;d1-37;60012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15999999.835363;y
+D138;d1-38;64012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;14565092.325972;y
+D231;d2-31;68012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;14507240.186299;y
+D232;d2-32;72012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;13770062.248544;y
+D233;d2-33;76012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15818648.745116;y
+D234;d2-34;80012.000000;188180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;7897148.478000;y
+D124;d1-24;48012.000000;192180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;6811586.292803;y
+D127;d1-27;60012.000000;192180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;9628184.965186;y
+D128;d1-28;64012.000000;192180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;9198432.992026;y
+D221;d2-21;68012.000000;192180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15182349.116742;y
+D222;d2-22;72012.000000;192180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;15553008.688809;y
+D223;d2-23;76012.000000;192180.000000;Ecoregio van de westelijke interfluvia;Lemig IJzer-Leie interfluviumdistrict;10745921.201166;y
+E158;e1-58;64012.000000;160180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;383501.773612;y
+E251;e2-51;68012.000000;160180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;1788421.504748;y
+E252;e2-52;72012.000000;160180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;5224490.975563;y
+E253;e2-53;76012.000000;160180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;8737476.222585;y
+E254;e2-54;80012.000000;160180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;8284996.405965;y
+E241;e2-41;68012.000000;164180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;15567435.663648;y
+E242;e2-42;72012.000000;164180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;15999999.835363;y
+E243;e2-43;76012.000000;164180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;15999999.835363;y
+E244;e2-44;80012.000000;164180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;15981749.008793;y
+E233;e2-33;76012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;8651216.978965;y
+E234;e2-34;80012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;6360953.152983;y
+E236;e2-36;88012.000000;168180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;13778862.447093;y
+E227;e2-27;92012.000000;172180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;15849518.962141;y
+E217;e2-17;92012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;14142276.075799;y
+E218;e2-18;96012.000000;176180.000000;Ecoregio van de westelijke interfluvia;Lemig Leie-Schelde interfluviumdistrict;15252697.556302;y
+D352;d3-52;104012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;9643301.216486;y
+D358;d3-58;128012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;8279039.735299;y
+D451;d4-51;132012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;14780244.363637;y
+D342;d3-42;104012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;10657621.260100;y
+D343;d3-43;108012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D344;d3-44;112012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;14709848.820941;y
+D345;d3-45;116012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15282608.314438;y
+D346;d3-46;120012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D347;d3-47;124012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D348;d3-48;128012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D441;d4-41;132012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D442;d4-42;136012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D443;d4-43;140012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D444;d4-44;144012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;14579074.916243;y
+D445;d4-45;148012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;11291694.984736;y
+D446;d4-46;152012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;7085028.205076;y
+D333;d3-33;108012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;13966176.709713;y
+D335;d3-35;116012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;10163077.067808;y
+D336;d3-36;120012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;11673855.409515;y
+D337;d3-37;124012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;9005018.273649;y
+D338;d3-38;128012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15230631.271270;y
+D431;d4-31;132012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D432;d4-32;136012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;15999999.835363;y
+D433;d4-33;140012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;14804852.872176;y
+D434;d4-34;144012.000000;188180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Midden-Vlaams glooiend zandleemdistrict;11896067.465332;y
+D457;d4-57;156012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Vochtig Beneden-Dijledistrict;13383899.969809;y
+D458;d4-58;160012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Vochtig Beneden-Dijledistrict;12677000.212788;y
+D551;d5-51;164012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Vochtig Beneden-Dijledistrict;13407722.552231;y
+D552;d5-52;168012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Vochtig Beneden-Dijledistrict;15999999.835363;y
+D553;d5-53;172012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Vochtig Beneden-Dijledistrict;14630071.467776;y
+D554;d5-54;176012.000000;180180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Vochtig Beneden-Dijledistrict;11745294.728512;y
+D448;d4-48;160012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Vochtig Beneden-Dijledistrict;9531663.196466;y
+D541;d5-41;164012.000000;184180.000000;Ecoregio van de Midden-Vlaamse overgangsgebieden;Vochtig Beneden-Dijledistrict;11667480.485212;y
+E151;e1-51;36012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;821477.178715;y
+E152;e1-52;40012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;11405771.302098;y
+E153;e1-53;44012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;2673194.447722;y
+E154;e1-54;48012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;1213899.283833;y
+E141;e1-41;36012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;9471113.496325;y
+E142;e1-42;40012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;15444570.671611;y
+E143;e1-43;44012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;15302375.574654;y
+E144;e1-44;48012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;11730245.677499;y
+E131;e1-31;36012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;West-Vlaams lemig heuveldistrict;10291532.761005;y
+F325;f3-25;116012.000000;152180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;218202.988563;y
+F326;f3-26;120012.000000;152180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;2882133.158585;y
+F327;f3-27;124012.000000;152180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;2214333.163477;y
+F328;f3-28;128012.000000;152180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;244757.245178;y
+F217;f2-17;92012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;239241.298867;y
+F218;f2-18;96012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;1457571.235724;y
+F311;f3-11;100012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;666713.664653;y
+F315;f3-15;116012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;5067999.340092;y
+F316;f3-16;120012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+F317;f3-17;124012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15959015.083409;y
+F318;f3-18;128012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;13557234.757562;y
+F411;f4-11;132012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;9020621.786591;y
+F412;f4-12;136012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;6846294.030306;y
+F413;f4-13;140012.000000;156180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;13416905.396172;y
+E256;e2-56;88012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;2896242.804272;y
+E257;e2-57;92012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;9516027.298533;y
+E258;e2-58;96012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15937630.359630;y
+E351;e3-51;100012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;7643382.106581;y
+E352;e3-52;104012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15390.908777;y
+E353;e3-53;108012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;5611851.972467;y
+E354;e3-54;112012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;10056139.455185;y
+E355;e3-55;116012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;11606524.563218;y
+E356;e3-56;120012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E357;e3-57;124012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E358;e3-58;128012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E451;e4-51;132012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E452;e4-52;136012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E453;e4-53;140012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E454;e4-54;144012.000000;160180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;11941599.175898;y
+E247;e2-47;92012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;10530763.027239;y
+E248;e2-48;96012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E341;e3-41;100012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15628613.247874;y
+E342;e3-42;104012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;13815766.100882;y
+E343;e3-43;108012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15288324.264383;y
+E344;e3-44;112012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E345;e3-45;116012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E346;e3-46;120012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E347;e3-47;124012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E348;e3-48;128012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E441;e4-41;132012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E442;e4-42;136012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E443;e4-43;140012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E444;e4-44;144012.000000;164180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15954815.765793;y
+E238;e2-38;96012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;11067596.635485;y
+E331;e3-31;100012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E332;e3-32;104012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E333;e3-33;108012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E334;e3-34;112012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E335;e3-35;116012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E336;e3-36;120012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E337;e3-37;124012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E338;e3-38;128012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E431;e4-31;132012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E432;e4-32;136012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E433;e4-33;140012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E434;e4-34;144012.000000;168180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E321;e3-21;100012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;9383945.661987;y
+E322;e3-22;104012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;14665187.109749;y
+E323;e3-23;108012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E324;e3-24;112012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E325;e3-25;116012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E326;e3-26;120012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E327;e3-27;124012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E328;e3-28;128012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E421;e4-21;132012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E422;e4-22;136012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E423;e4-23;140012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;14971909.580578;y
+E424;e4-24;144012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E425;e4-25;148012.000000;172180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;14672881.330728;y
+E312;e3-12;104012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;10173224.470509;y
+E313;e3-13;108012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E314;e3-14;112012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E315;e3-15;116012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E316;e3-16;120012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E317;e3-17;124012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E318;e3-18;128012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;15999999.835363;y
+E411;e4-11;132012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;10803066.706533;y
+E412;e4-12;136012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;8474056.742484;y
+E416;e4-16;152012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;8023611.585215;y
+D353;d3-53;108012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;8709153.476368;y
+D354;d3-54;112012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;9843349.702011;y
+D355;d3-55;116012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;8207096.797195;y
+D356;d3-56;120012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;11125938.248245;y
+D357;d3-57;124012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Zuid-Vlaams lemig heuveldistrict;13475100.478930;y
+E413;e4-13;140012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Lemig Brabants cuestadistrict;13416244.130551;y
+E414;e4-14;144012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Lemig Brabants cuestadistrict;13145101.810671;y
+E415;e4-15;148012.000000;176180.000000;Ecoregio van de zuidwestelijke heuvelzone;Lemig Brabants cuestadistrict;9710547.682367;y
+D452;d4-52;136012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Lemig Brabants cuestadistrict;8264787.035381;y
+D453;d4-53;140012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Lemig Brabants cuestadistrict;10925638.480891;y
+D454;d4-54;144012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Lemig Brabants cuestadistrict;15856069.274708;y
+D455;d4-55;148012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Lemig Brabants cuestadistrict;15999999.835363;y
+D456;d4-56;152012.000000;180180.000000;Ecoregio van de zuidwestelijke heuvelzone;Lemig Brabants cuestadistrict;12573372.819633;y
+F423;f4-23;140012.000000;152180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;721052.087524;y
+F424;f4-24;144012.000000;152180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;304083.404958;y
+F414;f4-14;144012.000000;156180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;13351782.148052;y
+F415;f4-15;148012.000000;156180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;5622105.329444;y
+F416;f4-16;152012.000000;156180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;985105.592073;y
+F418;f4-18;160012.000000;156180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;754399.158573;y
+E455;e4-55;148012.000000;160180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999815.333797;y
+E456;e4-56;152012.000000;160180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15814345.535468;y
+E457;e4-57;156012.000000;160180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;9931587.171986;y
+E458;e4-58;160012.000000;160180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;12799936.284694;y
+E551;e5-51;164012.000000;160180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;8686115.985855;y
+E552;e5-52;168012.000000;160180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;9973820.716461;y
+E553;e5-53;172012.000000;160180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;93176.222920;y
+E445;e4-45;148012.000000;164180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;12406050.823256;y
+E446;e4-46;152012.000000;164180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E447;e4-47;156012.000000;164180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E448;e4-48;160012.000000;164180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E541;e5-41;164012.000000;164180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E542;e5-42;168012.000000;164180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;13205389.865867;y
+E435;e4-35;148012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;9172046.091396;y
+E436;e4-36;152012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E437;e4-37;156012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E438;e4-38;160012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E531;e5-31;164012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E532;e5-32;168012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;13571882.877620;y
+E426;e4-26;152012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15077920.892080;y
+E427;e4-27;156012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E428;e4-28;160012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E521;e5-21;164012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999999.835363;y
+E522;e5-22;168012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15999994.314606;y
+E417;e4-17;156012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15315698.102382;y
+E418;e4-18;160012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;15918919.572786;y
+E511;e5-11;164012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;14359920.656393;y
+E512;e5-12;168012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;12538140.827625;y
+E513;e5-13;172012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants lemig heuveldistrict;13969413.674792;y
+E543;e5-43;172012.000000;164180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;5879201.799929;y
+E544;e5-44;176012.000000;164180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;2160508.809411;y
+E533;e5-33;172012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;15999999.835363;y
+E534;e5-34;176012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;15843240.200293;y
+E535;e5-35;180012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;10475761.193759;y
+E523;e5-23;172012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;8947709.079601;y
+E524;e5-24;176012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;14406049.218689;y
+E525;e5-25;180012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;13032646.907703;y
+E514;e5-14;176012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Droog Boven-Dijledistrict;8958854.973528;y
+E515;e5-15;180012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;13941290.333950;y
+D555;d5-55;180012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;8990679.310686;y
+D556;d5-56;184012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;15999999.835363;y
+D557;d5-57;188012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;15999999.835363;y
+D558;d5-58;192012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;13235718.746240;y
+D651;d6-51;196012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;11010339.898571;y
+D545;d5-45;180012.000000;184180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;14356091.283190;y
+D546;d5-46;184012.000000;184180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;15999555.129500;y
+D547;d5-47;188012.000000;184180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;15999999.835363;y
+D548;d5-48;192012.000000;184180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;15999999.835363;y
+D641;d6-41;196012.000000;184180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;15999999.835363;y
+D642;d6-42;200012.000000;184180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;9346974.319020;y
+D538;d5-38;192012.000000;188180.000000;Ecoregio van de zuidoostelijke heuvelzone;Brabants Diestiaanheuvelruggendistrict;8954167.832346;y
+E631;e6-31;196012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;14618258.676889;y
+E632;e6-32;200012.000000;168180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;7934747.546164;y
+E526;e5-26;184012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;14615011.010577;y
+E527;e5-27;188012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;15999999.835363;y
+E528;e5-28;192012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;15999999.835363;y
+E621;e6-21;196012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;15999999.835363;y
+E622;e6-22;200012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;15964296.519583;y
+E516;e5-16;184012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;9179814.122768;y
+E517;e5-17;188012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;10400098.101162;y
+E518;e5-18;192012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;15364819.685926;y
+E611;e6-11;196012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;15999999.835363;y
+E612;e6-12;200012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;15999999.835363;y
+D652;d6-52;200012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Velpe-Getedistrict;13808512.595878;y
+E623;e6-23;204012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15493836.331855;y
+E624;e6-24;208012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15554632.086538;y
+E625;e6-25;212012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15999999.835363;y
+E626;e6-26;216012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15283458.571529;y
+E627;e6-27;220012.000000;172180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15947135.148318;y
+E613;e6-13;204012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;11831597.109696;y
+E614;e6-14;208012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15999999.835363;y
+E615;e6-15;212012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15999999.835363;y
+E616;e6-16;216012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15999999.835363;y
+E617;e6-17;220012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15999999.835363;y
+E618;e6-18;224012.000000;176180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;14865717.556190;y
+D653;d6-53;204012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;9492036.054886;y
+D654;d6-54;208012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;15378662.742560;y
+D655;d6-55;212012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;14989955.736069;y
+D656;d6-56;216012.000000;180180.000000;Ecoregio van de zuidoostelijke heuvelzone;Vochtig Haspengouws leemdistrict;11549512.215294;y
+F623;f6-23;204012.000000;152180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;1279.707549;y
+F611;f6-11;196012.000000;156180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;215552.506128;y
+F612;f6-12;200012.000000;156180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;9893821.758244;y
+F613;f6-13;204012.000000;156180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;12976403.745101;y
+F614;f6-14;208012.000000;156180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;7277410.774321;y
+F615;f6-15;212012.000000;156180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;5123021.021360;y
+F616;f6-16;216012.000000;156180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;2170312.684460;y
+E556;e5-56;184012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;1395509.216083;y
+E557;e5-57;188012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;5418494.213010;y
+E558;e5-58;192012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;4053345.981200;y
+E651;e6-51;196012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;6920891.036353;y
+E652;e6-52;200012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E653;e6-53;204012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E654;e6-54;208012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E655;e6-55;212012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E656;e6-56;216012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15783276.790063;y
+E657;e6-57;220012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;9727838.322000;y
+E753;e7-53;236012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;1511.454440;y
+E545;e5-45;180012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;5753823.888892;y
+E546;e5-46;184012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15329396.725908;y
+E547;e5-47;188012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15878471.601766;y
+E548;e5-48;192012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15755156.816995;y
+E641;e6-41;196012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15033185.736912;y
+E642;e6-42;200012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E643;e6-43;204012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E644;e6-44;208012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E645;e6-45;212012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E646;e6-46;216012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E647;e6-47;220012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E648;e6-48;224012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15910062.901386;y
+E741;e7-41;228012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;9907536.830226;y
+E742;e7-42;232012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;10566710.533133;y
+E743;e7-43;236012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;11766935.190058;y
+E536;e5-36;184012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;11668757.033643;y
+E537;e5-37;188012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;13315758.114872;y
+E538;e5-38;192012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;9269538.965327;y
+E633;e6-33;204012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;9828854.936588;y
+E634;e6-34;208012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;11863982.096971;y
+E635;e6-35;212012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;8488223.849179;y
+E636;e6-36;216012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;14028537.043903;y
+E637;e6-37;220012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;12730515.148154;y
+E638;e6-38;224012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E731;e7-31;228012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E732;e7-32;232012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15999999.835363;y
+E733;e7-33;236012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15989231.793565;y
+E734;e7-34;240012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;10667800.644761;y
+E628;e6-28;224012.000000;172180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;8059351.529406;y
+E721;e7-21;228012.000000;172180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;10837261.794389;y
+E722;e7-22;232012.000000;172180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;14414267.341150;y
+E723;e7-23;236012.000000;172180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;15925858.962651;y
+E724;e7-24;240012.000000;172180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;6851367.438985;y
+E714;e7-14;240012.000000;176180.000000;Ecoregio van de krijt-leemgebieden;Golvend Haspengouws leemdistrict;8240861.597413;y
+F618;f6-18;224012.000000;156180.000000;Ecoregio van de krijt-leemgebieden;Haspengouws leemplateaudistrict;2390880.350225;y
+F711;f7-11;228012.000000;156180.000000;Ecoregio van de krijt-leemgebieden;Haspengouws leemplateaudistrict;995933.837263;y
+E658;e6-58;224012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Haspengouws leemplateaudistrict;9010197.515543;y
+E751;e7-51;228012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Haspengouws leemplateaudistrict;14902604.963183;y
+E752;e7-52;232012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Haspengouws leemplateaudistrict;4901672.063329;y
+E744;e7-44;240012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Haspengouws leemplateaudistrict;2224778.007641;y
+E735;e7-35;244012.000000;168180.000000;Ecoregio van de krijt-leemgebieden;Haspengouws leemplateaudistrict;893689.579798;y
+E755;e7-55;244012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Lemig Maasterrassendistrict;3159543.809787;y
+E756;e7-56;248012.000000;160180.000000;Ecoregio van de krijt-leemgebieden;Lemig Maasterrassendistrict;4462300.464973;y
+E745;e7-45;244012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Lemig Maasterrassendistrict;46671.652959;y
+E746;e7-46;248012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Lemig Maasterrassendistrict;5000250.965712;y
+E747;e7-47;252012.000000;164180.000000;Ecoregio van de krijt-leemgebieden;Lemig Maasterrassendistrict;691839.332149;y
+F717;f7-17;252012.000000;156180.000000;Ecoregio van de krijtgebieden;Voerens krijtdistrict;2466986.984518;y
+F718;f7-18;256012.000000;156180.000000;Ecoregio van de krijtgebieden;Voerens krijtdistrict;3647730.229145;y
+E757;e7-57;252012.000000;160180.000000;Ecoregio van de krijtgebieden;Voerens krijtdistrict;13073314.975534;y
+E758;e7-58;256012.000000;160180.000000;Ecoregio van de krijtgebieden;Voerens krijtdistrict;14768967.021344;y
+E851;e8-51;260012.000000;160180.000000;Ecoregio van de krijtgebieden;Voerens krijtdistrict;1086748.565249;y
+E748;e7-48;256012.000000;164180.000000;Ecoregio van de krijtgebieden;Voerens krijtdistrict;1391563.308798;y
+E715;e7-15;244012.000000;176180.000000;Ecoregio van de grindrivieren;Maasdistrict;1716955.344729;y
+D755;d7-55;244012.000000;180180.000000;Ecoregio van de grindrivieren;Maasdistrict;10585972.691589;y
+D756;d7-56;248012.000000;180180.000000;Ecoregio van de grindrivieren;Maasdistrict;532777.992124;y
+D745;d7-45;244012.000000;184180.000000;Ecoregio van de grindrivieren;Maasdistrict;10648678.103019;y
+D746;d7-46;248012.000000;184180.000000;Ecoregio van de grindrivieren;Maasdistrict;2422079.543585;y
+D736;d7-36;248012.000000;188180.000000;Ecoregio van de grindrivieren;Maasdistrict;6413002.034115;y
+D726;d7-26;248012.000000;192180.000000;Ecoregio van de grindrivieren;Maasdistrict;8482493.469520;y
+D716;d7-16;248012.000000;196180.000000;Ecoregio van de grindrivieren;Maasdistrict;10151560.164157;y
+D717;d7-17;252012.000000;196180.000000;Ecoregio van de grindrivieren;Maasdistrict;932828.288153;y
+C757;c7-57;252012.000000;200180.000000;Ecoregio van de grindrivieren;Maasdistrict;4336517.331355;y
+C747;c7-47;252012.000000;204180.000000;Ecoregio van de grindrivieren;Maasdistrict;6250616.410401;y
+C748;c7-48;256012.000000;204180.000000;Ecoregio van de grindrivieren;Maasdistrict;1130.847159;y
+C737;c7-37;252012.000000;208180.000000;Ecoregio van de grindrivieren;Maasdistrict;1157816.836111;y
