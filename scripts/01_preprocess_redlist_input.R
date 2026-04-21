@@ -71,12 +71,8 @@ derive_analysis_grids <- function(clean_df) {
     env_paths <- env_paths[file.exists(env_paths)]
 
     discovered <- c(
-      file.path('spatial', 'ifbl_grid.shp'),
-      file.path('spatial', 'ifbl_grid.kml'),
-      file.path('legacy_code', 'ifbl04x04.shp'),
-      file.path('legacy_code', 'IFBL_kwartierhokken.kml'),
-      file.path('data_aux', 'ifbl', 'ifbl_grid.shp'),
-      file.path('data_aux', 'ifbl', 'ifbl_grid.kml'),
+      file.path('spatial', 'ifbl04x04.shp'),
+      file.path('spatial', 'IFBL_kwartierhokken.kml'),
       list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE),
       list.files('spatial', pattern = '\\\\.kml$', full.names = TRUE)
     )
@@ -171,6 +167,8 @@ main <- function() {
   log_df_structure(raw, 'main.raw_input')
 
   records_clean <- normalize_occurrence_fields(raw)
+  print( "showing structure of records_clean")
+  str(records_clean)
   analysis_result <- derive_analysis_grids(records_clean)
   records_analysis <- analysis_result$analysis
 

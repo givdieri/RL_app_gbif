@@ -486,8 +486,8 @@ main <- function() {
     raw <- fetch_occurrences_gbif(
       taxon_keys = matched$occ_taxonKey,
       geo_cfg = geo_cfg,
-      page_size = as.integer(Sys.getenv('GBIF_PAGE_SIZE', unset = 300)),
-      max_pages = as.integer(Sys.getenv('GBIF_MAX_PAGES', unset = 10)),
+      page_size = as.integer(Sys.getenv('GBIF_PAGE_SIZE', unset = 100)),
+      max_pages = as.integer(Sys.getenv('GBIF_MAX_PAGES', unset = 30)),
       dataset_keys = supplemental_dataset_keys
     )
   }
