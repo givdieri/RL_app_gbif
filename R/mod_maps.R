@@ -15,6 +15,8 @@ mod_maps_server <- function(id, analysis_reactive, species_reactive, settings_re
       candidates <- c(
         file.path('spatial', 'ifbl_grid.shp'),
         file.path('spatial', 'ifbl_grid.kml'),
+        file.path('legacy_code', 'ifbl04x04.shp'),
+        file.path('legacy_code', 'IFBL_kwartierhokken.kml'),
         file.path('data_aux', 'ifbl', 'ifbl_grid.shp')
       )
       existing <- candidates[file.exists(candidates)]
@@ -60,6 +62,10 @@ mod_maps_server <- function(id, analysis_reactive, species_reactive, settings_re
 
       g <- tryCatch(sf::st_read(grid_path, quiet = TRUE), error = function(e) NULL)
       if (is.null(g) || nrow(g) == 0) return(NULL)
+      if (is.na(sf::st_crs(g))) {
+        warning('IFBL grid CRS missing; assuming EPSG:4326')
+        sf::st_crs(g) <- 4326
+      }
 
       id_candidates <- c('IFBL', 'ifbl_id', 'ifbl', 'CODE', 'code', 'GRID_ID', 'grid_id', 'Name', 'name')
       id_col <- id_candidates[id_candidates %in% names(g)][1]
@@ -85,9 +91,11 @@ mod_maps_server <- function(id, analysis_reactive, species_reactive, settings_re
 
         flanders_bbox <- sf::st_bbox(c(xmin = 2.45, ymin = 50.65, xmax = 5.95, ymax = 51.55), crs = sf::st_crs(4326))
         flanders_sf <- sf::st_as_sfc(flanders_bbox)
+        target_crs <- sf::st_crs(g)
+        if (is.na(target_crs)) target_crs <- sf::st_crs(4326)
 
         ggplot2::ggplot() +
-          ggplot2::geom_sf(data = sf::st_transform(flanders_sf, sf::st_crs(g)), fill = '#F8FAFC', color = '#CBD5E1') +
+          ggplot2::geom_sf(data = sf::st_transform(flanders_sf, target_crs), fill = '#F8FAFC', color = '#CBD5E1') +
           ggplot2::geom_sf(
             data = joined,
             ggplot2::aes(fill = occurrence_period),

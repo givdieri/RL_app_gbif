@@ -8,6 +8,20 @@ suppressPackageStartupMessages({
   library(sf)
 })
 
+log_df_structure <- function(df, label, preview_cols = 12) {
+  cols <- names(df)
+  head_cols <- if (length(cols) > 0) paste(utils::head(cols, preview_cols), collapse = ', ') else '<none>'
+  type_pairs <- if (ncol(df) > 0) {
+    paste(sprintf('%s:%s', names(df), vapply(df, function(x) class(x)[1], character(1))), collapse = ', ')
+  } else {
+    '<none>'
+  }
+  message(sprintf(
+    '[df_debug] %s -> rows=%s cols=%s col_names=[%s] col_types=[%s]',
+    label, nrow(df), ncol(df), head_cols, type_pairs
+  ))
+}
+
 normalize_occurrence_fields <- function(raw_df) {
   if (nrow(raw_df) == 0) stop('normalize_occurrence_fields: raw_df has no rows.')
 
@@ -38,6 +52,7 @@ normalize_occurrence_fields <- function(raw_df) {
       ),
       quality_flag = if_else(exclusion_flag, 'excluded', 'ok')
     )
+  log_df_structure(clean, 'normalize_occurrence_fields.output')
 
   clean
 }
@@ -49,14 +64,6 @@ derive_analysis_grids <- function(clean_df) {
   if (nrow(kept) == 0) stop('derive_analysis_grids: no non-excluded records to analyze.')
 
   pts <- st_as_sf(kept, coords = c('decimalLongitude', 'decimalLatitude'), crs = 4326, remove = FALSE)
-  merc <- st_transform(pts, 3857)
-  coords <- st_coordinates(merc)
-  grid_size_m <- 10000
-
-  fallback_grid <- paste0(
-    floor(coords[, 1] / grid_size_m), '_',
-    floor(coords[, 2] / grid_size_m)
-  )
 
   discover_ifbl_grid_paths <- function() {
     env_path <- Sys.getenv('IFBL_GRID_PATH', unset = '')
@@ -66,6 +73,8 @@ derive_analysis_grids <- function(clean_df) {
     discovered <- c(
       file.path('spatial', 'ifbl_grid.shp'),
       file.path('spatial', 'ifbl_grid.kml'),
+      file.path('legacy_code', 'ifbl04x04.shp'),
+      file.path('legacy_code', 'IFBL_kwartierhokken.kml'),
       file.path('data_aux', 'ifbl', 'ifbl_grid.shp'),
       file.path('data_aux', 'ifbl', 'ifbl_grid.kml'),
       list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE),
@@ -76,6 +85,11 @@ derive_analysis_grids <- function(clean_df) {
   }
 
   extract_ifbl_id <- function(grid_sf, preferred = c('uurhok', 'kwartier')) {
+    if (is.na(st_crs(grid_sf))) {
+      warning('IFBL grid has no CRS metadata; assuming EPSG:4326')
+      st_crs(grid_sf) <- 4326
+    }
+
     nm <- names(grid_sf)
     id_candidates <- c('IFBL', 'ifbl_id', 'ifbl', 'CODE', 'code', 'GRID_ID', 'grid_id', 'Name', 'name')
     id_col <- id_candidates[id_candidates %in% nm][1]
@@ -87,6 +101,10 @@ derive_analysis_grids <- function(clean_df) {
   }
 
   grid_paths <- discover_ifbl_grid_paths()
+  if (length(grid_paths) == 0) {
+    stop('No IFBL grid file found. Provide spatial/ifbl_grid.shp, spatial/ifbl_grid.kml, or IFBL_GRID_PATH.')
+  }
+
   kept$ifbl_uurhok <- NA_character_
   kept$ifbl_kwartier <- NA_character_
 
@@ -105,15 +123,30 @@ derive_analysis_grids <- function(clean_df) {
     }
   }
 
-  kept$ifbl_grid_id <- dplyr::coalesce(kept$ifbl_kwartier, kept$ifbl_uurhok, fallback_grid)
+  kept$ifbl_grid_id <- dplyr::coalesce(kept$ifbl_kwartier, kept$ifbl_uurhok)
   kept$grid_source <- dplyr::case_when(
     !is.na(kept$ifbl_kwartier) & kept$ifbl_kwartier != '' ~ 'ifbl_kwartier',
     !is.na(kept$ifbl_uurhok) & kept$ifbl_uurhok != '' ~ 'ifbl_uurhok',
-    TRUE ~ 'fallback_10km'
+    TRUE ~ NA_character_
   )
   kept$grid_id <- kept$ifbl_grid_id
 
-  kept
+  missing_ifbl_idx <- is.na(kept$ifbl_grid_id) | kept$ifbl_grid_id == ''
+  dropped <- kept[missing_ifbl_idx, , drop = FALSE] %>%
+    mutate(
+      exclusion_flag = TRUE,
+      exclusion_reason = 'no_ifbl_grid_match',
+      quality_flag = 'excluded'
+    )
+  kept <- kept[!missing_ifbl_idx, , drop = FALSE]
+
+  if (nrow(kept) == 0) {
+    stop('derive_analysis_grids: no records matched IFBL grid. Check IFBL grid coverage/CRS and input coordinates.')
+  }
+
+  log_df_structure(kept, 'derive_analysis_grids.analysis')
+  log_df_structure(dropped, 'derive_analysis_grids.excluded_ifbl')
+  list(analysis = kept, excluded_ifbl = dropped)
 }
 
 write_app_data_outputs <- function(records_clean, records_analysis, species_master, settings_defaults, excluded_records, out_dir = 'app_data') {
@@ -135,9 +168,11 @@ main <- function() {
   first_line <- readLines(raw_path, n = 1, warn = FALSE)
   delim <- if (grepl(';', first_line, fixed = TRUE)) ';' else ','
   raw <- read_delim(raw_path, delim = delim, show_col_types = FALSE, locale = locale(decimal_mark = ','))
+  log_df_structure(raw, 'main.raw_input')
 
   records_clean <- normalize_occurrence_fields(raw)
-  records_analysis <- derive_analysis_grids(records_clean)
+  analysis_result <- derive_analysis_grids(records_clean)
+  records_analysis <- analysis_result$analysis
 
   species_master <- records_clean %>%
     distinct(species_working) %>%
@@ -165,7 +200,12 @@ main <- function() {
     )
   )
 
-  excluded <- records_clean %>% filter(exclusion_flag)
+  excluded <- bind_rows(
+    records_clean %>% filter(exclusion_flag),
+    analysis_result$excluded_ifbl %>% select(any_of(names(records_clean)))
+  )
+  log_df_structure(records_analysis, 'main.records_analysis')
+  log_df_structure(excluded, 'main.excluded_records')
 
   write_app_data_outputs(
     records_clean = records_clean,

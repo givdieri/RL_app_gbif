@@ -15,6 +15,20 @@ log_msg <- function(...) {
   cat(sprintf('[%s] %s\n', Sys.time(), paste(..., collapse = ' ')))
 }
 
+log_df_structure <- function(df, label, preview_cols = 12) {
+  cols <- names(df)
+  head_cols <- if (length(cols) > 0) paste(utils::head(cols, preview_cols), collapse = ', ') else '<none>'
+  type_pairs <- if (ncol(df) > 0) {
+    paste(sprintf('%s:%s', names(df), vapply(df, function(x) class(x)[1], character(1))), collapse = ', ')
+  } else {
+    '<none>'
+  }
+  log_msg(sprintf(
+    '[df_debug] %s -> rows=%s cols=%s col_names=[%s] col_types=[%s]',
+    label, nrow(df), ncol(df), head_cols, type_pairs
+  ))
+}
+
 gbif_get_json <- function(path, params = list()) {
   base <- 'https://api.gbif.org/v1'
   q <- if (length(params) > 0) {
@@ -41,7 +55,7 @@ name_suggest_api <- function(name, limit = 20) {
   as_tibble(res)
 }
 
-occ_search_api <- function(taxonKey, limit = 3000, start = 0, country = 'BE', hasCoordinate = TRUE, datasetKey = NULL) {
+occ_search_api <- function(taxonKey, limit = 300, start = 0, country = 'BE', hasCoordinate = TRUE, datasetKey = NULL) {
   params <- list(
     taxonKey = as.integer(taxonKey),
     limit = as.integer(limit),
@@ -57,18 +71,53 @@ occ_search_api <- function(taxonKey, limit = 3000, start = 0, country = 'BE', ha
 }
 
 get_default_geo_cfg <- function() {
-  # Approximate polygon for Flanders (preferred), with Belgium fallback.
-  flanders_poly <- matrix(
-    c(
-      2.50, 50.68,
-      5.92, 50.68,
-      5.92, 51.51,
-      2.50, 51.51,
-      2.50, 50.68
-    ),
-    ncol = 2,
-    byrow = TRUE
-  )
+  discover_ifbl_grid_paths <- function() {
+    env_path <- Sys.getenv('IFBL_GRID_PATH', unset = '')
+    env_paths <- if (nzchar(env_path)) str_split(env_path, ';|,')[[1]] |> str_trim() else character(0)
+    env_paths <- env_paths[file.exists(env_paths)]
+
+    discovered <- c(
+      file.path('spatial', 'ifbl_grid.shp'),
+      file.path('spatial', 'ifbl_grid.kml'),
+      file.path('legacy_code', 'ifbl04x04.shp'),
+      file.path('legacy_code', 'IFBL_kwartierhokken.kml'),
+      file.path('data_aux', 'ifbl', 'ifbl_grid.shp'),
+      file.path('data_aux', 'ifbl', 'ifbl_grid.kml'),
+      list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE),
+      list.files('spatial', pattern = '\\\\.kml$', full.names = TRUE)
+    )
+    discovered <- unique(discovered[file.exists(discovered)])
+    unique(c(env_paths, discovered))
+  }
+
+  load_filter_polygon <- function() {
+    for (p in discover_ifbl_grid_paths()) {
+      g <- tryCatch(st_read(p, quiet = TRUE), error = function(e) NULL)
+      if (is.null(g) || nrow(g) == 0) next
+      if (is.na(st_crs(g))) st_crs(g) <- 4326
+      geom <- tryCatch(st_geometry(g), error = function(e) NULL)
+      if (is.null(geom)) next
+      geom_4326 <- tryCatch(st_transform(geom, 4326), error = function(e) NULL)
+      if (is.null(geom_4326)) next
+      merged <- tryCatch(st_union(geom_4326), error = function(e) NULL)
+      if (is.null(merged)) next
+      return(st_as_sfc(merged))
+    }
+    NULL
+  }
+
+  poly_from_ifbl <- load_filter_polygon()
+  if (!is.null(poly_from_ifbl)) {
+    return(list(
+      use_polygon = TRUE,
+      polygon = poly_from_ifbl,
+      country = 'BE',
+      stateProvince = 'Vlaanderen'
+    ))
+  }
+
+  # Approximate polygon fallback for Flanders, with Belgium fallback.
+  flanders_poly <- matrix(c(2.50, 50.68, 5.92, 50.68, 5.92, 51.51, 2.50, 51.51, 2.50, 50.68), ncol = 2, byrow = TRUE)
 
   list(
     use_polygon = TRUE,
@@ -188,7 +237,7 @@ resolve_taxa_gbif <- function(taxa_vec) {
   })
 }
 
-fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 3000, max_pages = 40, dataset_keys = character(0)) {
+fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 300, max_pages = 10, dataset_keys = character(0)) {
   if (length(taxon_keys) == 0) {
     stop('fetch_occurrences_gbif: no taxon keys provided.')
   }
@@ -263,6 +312,7 @@ apply_flanders_filter <- function(df, geo_cfg) {
   if (nrow(df) == 0) {
     return(list(kept = df, excluded = tibble()))
   }
+  log_df_structure(df, 'apply_flanders_filter.input')
 
   req_cols <- c('key', 'species', 'decimalLongitude', 'decimalLatitude', 'datasetName', 'eventDate')
   missing <- setdiff(req_cols, names(df))
@@ -273,38 +323,42 @@ apply_flanders_filter <- function(df, geo_cfg) {
     mutate(exclusion_reason = 'missing_coordinates')
   df_coords <- df[!missing_coord_idx, , drop = FALSE]
 
+  if (nrow(df_coords) == 0) {
+    return(list(kept = df_coords, excluded = missing_coord))
+  }
+
   normalize_state <- function(x) {
     x |>
       as.character() |>
       stringr::str_to_lower() |>
       stringr::str_replace_all('[^a-z]+', '')
   }
-
-  state_ok_idx <- normalize_state(df_coords$stateProvince) %in% c('vlaanderen', 'flanders')
-  missing_state_idx <- is.na(df_coords$stateProvince) | !nzchar(as.character(df_coords$stateProvince))
-  state_unknown <- df_coords[missing_state_idx, , drop = FALSE] %>%
-    mutate(exclusion_reason = 'missing_stateProvince')
-  state_mismatch <- df_coords[!state_ok_idx & !missing_state_idx, , drop = FALSE] %>%
-    mutate(exclusion_reason = 'outside_vlaanderen_stateProvince')
-  df_coords <- df_coords[state_ok_idx, , drop = FALSE]
-
-  if (nrow(df_coords) == 0) {
-    return(list(kept = df_coords, excluded = bind_rows(missing_coord, state_unknown, state_mismatch)))
-  }
+  require_stateprovince <- tolower(Sys.getenv('GBIF_REQUIRE_VLAANDEREN_STATEPROVINCE', unset = 'false')) == 'true'
+  state_norm <- normalize_state(df_coords$stateProvince)
+  state_ok_idx <- state_norm %in% c('vlaanderen', 'flanders')
 
   pts <- st_as_sf(df_coords, coords = c('decimalLongitude', 'decimalLatitude'), crs = 4326, remove = FALSE)
-
-  kept_idx <- if (isTRUE(geo_cfg$use_polygon)) {
+  spatial_idx <- if (isTRUE(geo_cfg$use_polygon)) {
     lengths(st_within(pts, geo_cfg$polygon)) > 0
   } else {
     warning('Polygon filter disabled. Falling back to Belgium-only filter.')
-    TRUE
+    rep(TRUE, nrow(df_coords))
   }
 
+  kept_idx <- if (require_stateprovince) spatial_idx & state_ok_idx else spatial_idx
   kept <- df_coords[kept_idx, , drop = FALSE]
-  excluded_geo <- df_coords[!kept_idx, , drop = FALSE] %>%
+
+  excluded_geo <- df_coords[!spatial_idx, , drop = FALSE] %>%
     mutate(exclusion_reason = 'outside_flanders_polygon')
-  excluded <- bind_rows(excluded_geo, missing_coord, state_unknown, state_mismatch)
+  excluded_state <- if (require_stateprovince) {
+    df_coords[spatial_idx & !state_ok_idx, , drop = FALSE] %>%
+      mutate(exclusion_reason = 'outside_vlaanderen_stateProvince')
+  } else {
+    tibble()
+  }
+  excluded <- bind_rows(excluded_geo, excluded_state, missing_coord)
+  log_df_structure(kept, 'apply_flanders_filter.kept')
+  log_df_structure(excluded, 'apply_flanders_filter.excluded')
 
   list(kept = kept, excluded = excluded)
 }
@@ -332,15 +386,7 @@ write_fetch_outputs <- function(raw_occ_df, taxon_match_log_df, exclusion_log_df
   exclusion_log_df <- flatten_non_atomic_cols(exclusion_log_df)
 
   dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
-  print("str pint of raw_occ_df")
-  str(raw_occ_df)
-  print("str pint of taxon_match_log_df")
-  str(taxon_match_log_df)
-  print("str pint of exclusion_log_df")
-  str(exclusion_log_df)
-  print("str pint of metadata")
-  str(metadata)
-  
+
   write_csv(raw_occ_df, file.path(out_dir, 'occurrences_raw.csv'))
   write_csv(taxon_match_log_df, file.path(out_dir, 'taxon_match_log.csv'))
   write_csv(exclusion_log_df, file.path(out_dir, 'exclusion_log.csv'))
@@ -449,9 +495,12 @@ main <- function() {
   if (nrow(raw) == 0) {
     stop('No occurrence records returned from GBIF. Check taxa/geography settings.')
   }
+  log_df_structure(raw, 'fetch_occurrences.raw_before_filter')
 
   log_msg('Applying Flanders filter...')
   filtered <- apply_flanders_filter(raw, geo_cfg)
+  log_df_structure(filtered$kept, 'fetch_occurrences.filtered_kept')
+  log_df_structure(filtered$excluded, 'fetch_occurrences.filtered_excluded')
 
   metadata <- list(
     generated_at_utc = format(Sys.time(), tz = 'UTC', usetz = TRUE),
