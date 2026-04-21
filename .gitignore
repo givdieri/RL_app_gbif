@@ -11,3 +11,6 @@ renv/library/
 # logs/temp
 *.log
 /tmp/
+
+# local toy/sample data (no longer used by pipeline)
+/main/toy_data/

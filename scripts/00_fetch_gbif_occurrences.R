@@ -395,24 +395,6 @@ write_fetch_outputs <- function(raw_occ_df, taxon_match_log_df, exclusion_log_df
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
-load_gbif_example_occurrences <- function() {
-  local_example <- 'main/toy_data/fungal_occurences_Vlaanderen.csv'
-  if (!file.exists(local_example)) {
-    stop('Fallback example file not found: main/toy_data/fungal_occurences_Vlaanderen.csv')
-  }
-
-  first_line <- readLines(local_example, n = 1, warn = FALSE)
-  delim <- if (grepl(';', first_line, fixed = TRUE)) ';' else ','
-  occ <- readr::read_delim(local_example, delim = delim, show_col_types = FALSE, locale = readr::locale(decimal_mark = ','))
-
-  occ %>%
-    mutate(
-      key = as.character(key),
-      datasetName = as.character(datasetName)
-    ) %>%
-    filter(str_to_lower(kingdom) == 'fungi')
-}
-
 main <- function() {
   default_taxa <- c(
     'Amanita muscaria',
@@ -450,37 +432,14 @@ main <- function() {
   taxon_log <- resolve_taxa_gbif(taxa)
 
   matched <- taxon_log %>% filter(match_type != 'failed', !is.na(occ_taxonKey))
-  allow_example_fallback <- tolower(Sys.getenv('GBIF_ALLOW_EXAMPLE_FALLBACK', unset = 'false')) == 'true'
   if (nrow(matched) == 0) {
-    if (!allow_example_fallback) {
-      dir.create('data_raw/gbif', recursive = TRUE, showWarnings = FALSE)
-      write_csv(taxon_log, 'data_raw/gbif/taxon_match_log.csv')
-      fail_reasons <- unique(na.omit(taxon_log$note))
-      stop(sprintf(
-        'No taxa could be resolved to GBIF usage keys. First logged reason: %s',
-        ifelse(length(fail_reasons) > 0, fail_reasons[[1]], 'no reason captured')
-      ))
-    }
-    warning('GBIF API unavailable during taxon resolution. Using local toy fallback file.')
-    raw <- load_gbif_example_occurrences()
-    geo_cfg$use_polygon <- FALSE
-    taxon_log <- bind_rows(
-      taxon_log,
-      tibble(
-        input_name = '__fallback__',
-        query_name = '__fallback__',
-        matched_name = 'local toy fallback',
-        accepted_name = 'local toy fallback',
-        rank = NA_character_,
-        status = NA_character_,
-        usageKey = NA_integer_,
-        acceptedUsageKey = NA_integer_,
-        occ_taxonKey = NA_integer_,
-        match_type = 'fallback_local_toy',
-        confidence = NA_real_,
-        note = 'API unavailable; fallback to local toy example file'
-      )
-    )
+    dir.create('data_raw/gbif', recursive = TRUE, showWarnings = FALSE)
+    write_csv(taxon_log, 'data_raw/gbif/taxon_match_log.csv')
+    fail_reasons <- unique(na.omit(taxon_log$note))
+    stop(sprintf(
+      'No taxa could be resolved to GBIF usage keys. First logged reason: %s',
+      ifelse(length(fail_reasons) > 0, fail_reasons[[1]], 'no reason captured')
+    ))
   } else {
     log_msg('Fetching GBIF occurrences...')
     raw <- fetch_occurrences_gbif(
