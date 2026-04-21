@@ -41,7 +41,7 @@ name_suggest_api <- function(name, limit = 20) {
   as_tibble(res)
 }
 
-occ_search_api <- function(taxonKey, limit = 300, start = 0, country = 'BE', hasCoordinate = TRUE, datasetKey = NULL) {
+occ_search_api <- function(taxonKey, limit = 3000, start = 0, country = 'BE', hasCoordinate = TRUE, datasetKey = NULL) {
   params <- list(
     taxonKey = as.integer(taxonKey),
     limit = as.integer(limit),
@@ -188,7 +188,7 @@ resolve_taxa_gbif <- function(taxa_vec) {
   })
 }
 
-fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 300, max_pages = 10, dataset_keys = character(0)) {
+fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 3000, max_pages = 40, dataset_keys = character(0)) {
   if (length(taxon_keys) == 0) {
     stop('fetch_occurrences_gbif: no taxon keys provided.')
   }
@@ -332,7 +332,15 @@ write_fetch_outputs <- function(raw_occ_df, taxon_match_log_df, exclusion_log_df
   exclusion_log_df <- flatten_non_atomic_cols(exclusion_log_df)
 
   dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
-
+  print("str pint of raw_occ_df")
+  str(raw_occ_df)
+  print("str pint of taxon_match_log_df")
+  str(taxon_match_log_df)
+  print("str pint of exclusion_log_df")
+  str(exclusion_log_df)
+  print("str pint of metadata")
+  str(metadata)
+  
   write_csv(raw_occ_df, file.path(out_dir, 'occurrences_raw.csv'))
   write_csv(taxon_match_log_df, file.path(out_dir, 'taxon_match_log.csv'))
   write_csv(exclusion_log_df, file.path(out_dir, 'exclusion_log.csv'))
