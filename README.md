@@ -6,11 +6,11 @@ Reproducible v1 pipeline for fungal Red List support in Flanders using **GBIF as
 
 - Implemented: Criterion A provisional workflow (expert-reviewed final category).
 - Postponed: Criterion B.
-- Data source: GBIF only, via `rgbif`.
+- Data source: GBIF only, via GBIF HTTP API (`api.gbif.org/v1`).
 
 ## Required R packages
 
-`rgbif, dplyr, purrr, readr, stringr, stringdist, jsonlite, tibble, sf, shiny, DT`
+`dplyr, purrr, readr, stringr, stringdist, jsonlite, tibble, sf, shiny, DT`
 
 ## Project structure
 
@@ -30,13 +30,13 @@ If `Rscript` is missing in your environment, bootstrap with:
 bash scripts/02_bootstrap_r_environment.sh
 ```
 
-This installs `r-base-core` and apt-packaged dependencies used by preprocessing/app code, then attempts an optional CRAN install of `rgbif`.
+This installs `r-base-core` and apt-packaged dependencies used by the fetch/preprocess/app code.
 
 ## Run pipeline
 
 ### 1) Fetch GBIF occurrences
 
-If GBIF API access is blocked (e.g. proxy restrictions), you can enable a non-production smoke-test fallback to a bundled GBIF example archive from `rgbif` with `GBIF_ALLOW_EXAMPLE_FALLBACK=true`.
+If GBIF API access is blocked (e.g. proxy restrictions), you can enable a non-production smoke-test fallback to local toy data (`main/toy_data/fungal_occurences_Vlaanderen.csv`) with `GBIF_ALLOW_EXAMPLE_FALLBACK=true`.
 
 You can override the built-in species list via `GBIF_TAXA_CSV` (comma-separated scientific names), e.g.:
 
@@ -55,6 +55,10 @@ Outputs:
 - `data_raw/gbif/exclusion_log.csv`
 - `data_raw/gbif/download_metadata.json`
 
+Notes:
+- Fetch query is restricted to `country=BE`.
+- After download, records are filtered to `stateProvince` values matching Vlaanderen/Flanders before spatial polygon filtering.
+
 ### 2) Preprocess for app
 
 ```bash
@@ -67,8 +71,8 @@ To preprocess an alternative raw file (e.g. toy/demo data), set `RAW_OCC_PATH`:
 RAW_OCC_PATH=main/toy_data/fungal_occurences_Vlaanderen.csv Rscript scripts/01_preprocess_redlist_input.R
 ```
 
-Optional IFBL grid translation: set `IFBL_GRID_PATH` to an IFBL grid shapefile (`.shp`).
-If `IFBL_GRID_PATH` is not set, preprocessing first checks `./spatial/ifbl_grid.shp`, then `data_aux/ifbl/ifbl_grid.shp`, then any `.shp` in `./spatial/`.
+Optional IFBL grid translation: set `IFBL_GRID_PATH` to an IFBL grid file (`.shp` or `.kml`).
+If `IFBL_GRID_PATH` is not set, preprocessing first checks `./spatial/ifbl_grid.shp`, then `data_aux/ifbl/ifbl_grid.shp`, then any `.shp`/`.kml` in `./spatial/`.
 If a grid is present and readable, records are assigned IFBL grid IDs by spatial join; otherwise the script falls back to 10x10km projected grid IDs.
 
 Outputs:

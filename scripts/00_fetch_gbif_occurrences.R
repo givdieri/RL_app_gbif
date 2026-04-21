@@ -1,7 +1,6 @@
 #!/usr/bin/env Rscript
 
 suppressPackageStartupMessages({
-  library(rgbif)
   library(dplyr)
   library(purrr)
   library(readr)
@@ -14,6 +13,45 @@ suppressPackageStartupMessages({
 
 log_msg <- function(...) {
   cat(sprintf('[%s] %s\n', Sys.time(), paste(..., collapse = ' ')))
+}
+
+gbif_get_json <- function(path, params = list()) {
+  base <- 'https://api.gbif.org/v1'
+  q <- if (length(params) > 0) {
+    paste(
+      purrr::imap_chr(params, ~ paste0(utils::URLencode(.y, reserved = TRUE), '=', utils::URLencode(as.character(.x), reserved = TRUE))),
+      collapse = '&'
+    )
+  } else {
+    ''
+  }
+  url <- paste0(base, path, if (nzchar(q)) paste0('?', q) else '')
+  txt <- tryCatch(readr::read_file(url), error = function(e) NULL)
+  if (is.null(txt) || !nzchar(txt)) return(NULL)
+  tryCatch(jsonlite::fromJSON(txt, simplifyVector = TRUE), error = function(e) NULL)
+}
+
+name_backbone_api <- function(name) {
+  gbif_get_json('/species/match', params = list(name = name, kingdom = 'Fungi', strict = 'false', verbose = 'false'))
+}
+
+name_suggest_api <- function(name, limit = 20) {
+  res <- gbif_get_json('/species/suggest', params = list(q = name, rank = 'species', limit = as.integer(limit)))
+  if (is.null(res)) return(tibble())
+  as_tibble(res)
+}
+
+occ_search_api <- function(taxonKey, limit = 300, start = 0, country = 'BE', hasCoordinate = TRUE) {
+  gbif_get_json(
+    '/occurrence/search',
+    params = list(
+      taxonKey = as.integer(taxonKey),
+      limit = as.integer(limit),
+      offset = as.integer(start),
+      country = country,
+      hasCoordinate = tolower(as.character(hasCoordinate))
+    )
+  )
 }
 
 get_default_geo_cfg <- function() {
@@ -47,12 +85,7 @@ resolve_taxa_gbif <- function(taxa_vec) {
     bb_result <- tryCatch(
       list(
         ok = TRUE,
-        value = name_backbone(
-          name = taxon_name,
-          kingdom = 'Fungi',
-          strict = FALSE,
-          verbose = FALSE
-        )
+        value = name_backbone_api(name = taxon_name)
       ),
       error = function(e) list(ok = FALSE, error = e$message)
     )
@@ -79,7 +112,7 @@ resolve_taxa_gbif <- function(taxa_vec) {
     }
 
     sugg_result <- tryCatch(
-      list(ok = TRUE, value = name_suggest(q = taxon_name, rank = 'species', limit = 20)),
+      list(ok = TRUE, value = name_suggest_api(name = taxon_name, limit = 20)),
       error = function(e) list(ok = FALSE, error = e$message)
     )
     sugg <- if (sugg_result$ok) sugg_result$value else tibble()
@@ -170,14 +203,7 @@ fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 300, max_pag
       }
 
       res <- tryCatch(
-        occ_search(
-          taxonKey = key,
-          limit = page_size,
-          start = start,
-          hasCoordinate = TRUE,
-          country = geo_cfg$country,
-          stateProvince = geo_cfg$stateProvince
-        ),
+        occ_search_api(taxonKey = key, limit = page_size, start = start, hasCoordinate = TRUE, country = geo_cfg$country),
         error = function(e) e
       )
 
@@ -186,14 +212,14 @@ fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 300, max_pag
         break
       }
 
-      dat <- as_tibble(res$data)
+      dat <- as_tibble(res$results %||% tibble())
       if (nrow(dat) == 0) break
 
       dat <- dat %>% mutate(requested_taxonKey = key, page = page)
       out[[length(out) + 1]] <- dat
 
-      meta <- res$meta
-      if (isTRUE(meta$endOfRecords) || nrow(dat) < page_size) break
+      end_of_records <- isTRUE(res$endOfRecords) || nrow(dat) < page_size
+      if (end_of_records) break
 
       start <- start + page_size
       page <- page + 1
@@ -222,8 +248,23 @@ apply_flanders_filter <- function(df, geo_cfg) {
     mutate(exclusion_reason = 'missing_coordinates')
   df_coords <- df[!missing_coord_idx, , drop = FALSE]
 
+  normalize_state <- function(x) {
+    x |>
+      as.character() |>
+      stringr::str_to_lower() |>
+      stringr::str_replace_all('[^a-z]+', '')
+  }
+
+  state_ok_idx <- normalize_state(df_coords$stateProvince) %in% c('vlaanderen', 'flanders')
+  missing_state_idx <- is.na(df_coords$stateProvince) | !nzchar(as.character(df_coords$stateProvince))
+  state_unknown <- df_coords[missing_state_idx, , drop = FALSE] %>%
+    mutate(exclusion_reason = 'missing_stateProvince')
+  state_mismatch <- df_coords[!state_ok_idx & !missing_state_idx, , drop = FALSE] %>%
+    mutate(exclusion_reason = 'outside_vlaanderen_stateProvince')
+  df_coords <- df_coords[state_ok_idx, , drop = FALSE]
+
   if (nrow(df_coords) == 0) {
-    return(list(kept = df_coords, excluded = missing_coord))
+    return(list(kept = df_coords, excluded = bind_rows(missing_coord, state_unknown, state_mismatch)))
   }
 
   pts <- st_as_sf(df_coords, coords = c('decimalLongitude', 'decimalLatitude'), crs = 4326, remove = FALSE)
@@ -238,12 +279,33 @@ apply_flanders_filter <- function(df, geo_cfg) {
   kept <- df_coords[kept_idx, , drop = FALSE]
   excluded_geo <- df_coords[!kept_idx, , drop = FALSE] %>%
     mutate(exclusion_reason = 'outside_flanders_polygon')
-  excluded <- bind_rows(excluded_geo, missing_coord)
+  excluded <- bind_rows(excluded_geo, missing_coord, state_unknown, state_mismatch)
 
   list(kept = kept, excluded = excluded)
 }
 
 write_fetch_outputs <- function(raw_occ_df, taxon_match_log_df, exclusion_log_df, metadata, out_dir = 'data_raw/gbif') {
+  flatten_non_atomic_cols <- function(df) {
+    out <- df
+    for (nm in names(out)) {
+      col <- out[[nm]]
+      if (is.list(col)) {
+        out[[nm]] <- purrr::map_chr(col, function(val) {
+          if (is.null(val) || (length(val) == 1 && is.na(val))) return(NA_character_)
+          if (length(val) == 0) return(NA_character_)
+          if (length(val) == 1 && is.atomic(val)) return(as.character(val))
+          jsonlite::toJSON(val, auto_unbox = TRUE)
+        })
+      } else if (is.matrix(col) || is.data.frame(col)) {
+        out[[nm]] <- apply(as.matrix(col), 1, function(val) jsonlite::toJSON(as.list(val), auto_unbox = TRUE))
+      }
+    }
+    out
+  }
+
+  raw_occ_df <- flatten_non_atomic_cols(raw_occ_df)
+  exclusion_log_df <- flatten_non_atomic_cols(exclusion_log_df)
+
   dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
   write_csv(raw_occ_df, file.path(out_dir, 'occurrences_raw.csv'))
@@ -255,18 +317,14 @@ write_fetch_outputs <- function(raw_occ_df, taxon_match_log_df, exclusion_log_df
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
 load_gbif_example_occurrences <- function() {
-  ex_zip <- system.file('examples', '0000066-140928181241064.zip', package = 'rgbif')
-  if (!nzchar(ex_zip) || !file.exists(ex_zip)) {
-    stop('GBIF example fallback archive not found in rgbif installation.')
+  local_example <- 'main/toy_data/fungal_occurences_Vlaanderen.csv'
+  if (!file.exists(local_example)) {
+    stop('Fallback example file not found: main/toy_data/fungal_occurences_Vlaanderen.csv')
   }
 
-  occ <- read_delim(unz(ex_zip, 'occurrence.txt'), delim = '\t', show_col_types = FALSE)
-  if (!'key' %in% names(occ)) {
-    occ$key <- if ('gbifID' %in% names(occ)) as.character(occ$gbifID) else as.character(seq_len(nrow(occ)))
-  }
-  if (!'datasetName' %in% names(occ)) {
-    occ$datasetName <- if ('publishingOrgKey' %in% names(occ)) occ$publishingOrgKey else 'GBIF example archive'
-  }
+  first_line <- readLines(local_example, n = 1, warn = FALSE)
+  delim <- if (grepl(';', first_line, fixed = TRUE)) ';' else ','
+  occ <- readr::read_delim(local_example, delim = delim, show_col_types = FALSE, locale = readr::locale(decimal_mark = ','))
 
   occ %>%
     mutate(
@@ -315,7 +373,7 @@ main <- function() {
         ifelse(length(fail_reasons) > 0, fail_reasons[[1]], 'no reason captured')
       ))
     }
-    warning('GBIF API unavailable during taxon resolution. Using bundled rgbif GBIF example archive fallback.')
+    warning('GBIF API unavailable during taxon resolution. Using local toy fallback file.')
     raw <- load_gbif_example_occurrences()
     geo_cfg$use_polygon <- FALSE
     taxon_log <- bind_rows(
@@ -323,16 +381,16 @@ main <- function() {
       tibble(
         input_name = '__fallback__',
         query_name = '__fallback__',
-        matched_name = 'rgbif example archive',
-        accepted_name = 'rgbif example archive',
+        matched_name = 'local toy fallback',
+        accepted_name = 'local toy fallback',
         rank = NA_character_,
         status = NA_character_,
         usageKey = NA_integer_,
         acceptedUsageKey = NA_integer_,
         occ_taxonKey = NA_integer_,
-        match_type = 'fallback_example_archive',
+        match_type = 'fallback_local_toy',
         confidence = NA_real_,
-        note = 'API unavailable; fallback to bundled GBIF example archive'
+        note = 'API unavailable; fallback to local toy example file'
       )
     )
   } else {
@@ -354,7 +412,7 @@ main <- function() {
 
   metadata <- list(
     generated_at_utc = format(Sys.time(), tz = 'UTC', usetz = TRUE),
-    source = 'GBIF via rgbif::occ_search',
+    source = 'GBIF via /v1/occurrence/search HTTP API',
     query_country = geo_cfg$country,
     filter_mode = if (isTRUE(geo_cfg$use_polygon)) 'polygon_flanders' else 'country_belgium_fallback',
     taxa_input = taxa,
@@ -363,6 +421,31 @@ main <- function() {
     occurrences_kept_n = nrow(filtered$kept),
     occurrences_excluded_n = nrow(filtered$excluded)
   )
+
+  keep_cols <- c(
+    'key',
+    'species',
+    'scientificName',
+    'acceptedScientificName',
+    'taxonRank',
+    'kingdom',
+    'countryCode',
+    'stateProvince',
+    'decimalLatitude',
+    'decimalLongitude',
+    'eventDate',
+    'year',
+    'basisOfRecord',
+    'institutionCode',
+    'collectionCode',
+    'datasetName',
+    'datasetKey',
+    'occurrenceID',
+    'requested_taxonKey',
+    'page'
+  )
+  filtered$kept <- filtered$kept[, intersect(keep_cols, names(filtered$kept)), drop = FALSE]
+  filtered$excluded <- filtered$excluded[, intersect(c(keep_cols, 'exclusion_reason'), names(filtered$excluded)), drop = FALSE]
 
   write_fetch_outputs(
     raw_occ_df = filtered$kept,

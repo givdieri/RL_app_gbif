@@ -10,7 +10,7 @@ Use this skill when a task asks to validate or troubleshoot IFBL grid assignment
 ## Steps
 1. Confirm whether `IFBL_GRID_PATH` is set.
 2. If not set, check for `spatial/ifbl_grid.shp` first.
-3. If still not found, look for any `*.shp` directly under `spatial/`.
+3. If still not found, look for any `*.shp` or `*.kml` directly under `spatial/`.
 4. Run preprocessing:
    - `Rscript scripts/01_preprocess_redlist_input.R`
    - or with overrides:
@@ -20,4 +20,4 @@ Use this skill when a task asks to validate or troubleshoot IFBL grid assignment
 
 ## Notes
 - IFBL assignment is best-effort and intentionally falls back to projected 10x10 km IDs.
-- Keep failures actionable: mention exact missing path or unreadable shapefile.
+- Keep failures actionable: mention exact missing path or unreadable grid file.

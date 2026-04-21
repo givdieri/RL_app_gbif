@@ -69,8 +69,11 @@ derive_analysis_grids <- function(clean_df) {
     existing_default <- default_candidates[file.exists(default_candidates)]
     if (length(existing_default) > 0) return(existing_default[[1]])
 
-    spatial_shp <- list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE)
-    if (length(spatial_shp) > 0) return(spatial_shp[[1]])
+    spatial_grid <- c(
+      list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE),
+      list.files('spatial', pattern = '\\\\.kml$', full.names = TRUE)
+    )
+    if (length(spatial_grid) > 0) return(spatial_grid[[1]])
 
     ''
   }
@@ -79,7 +82,7 @@ derive_analysis_grids <- function(clean_df) {
   if (file.exists(ifbl_grid_path)) {
     ifbl_grid <- tryCatch(st_read(ifbl_grid_path, quiet = TRUE), error = function(e) NULL)
     if (!is.null(ifbl_grid)) {
-      id_candidates <- c('IFBL', 'ifbl_id', 'ifbl', 'CODE', 'code', 'GRID_ID', 'grid_id')
+      id_candidates <- c('IFBL', 'ifbl_id', 'ifbl', 'CODE', 'code', 'GRID_ID', 'grid_id', 'Name', 'name')
       id_col <- id_candidates[id_candidates %in% names(ifbl_grid)][1]
       if (!is.na(id_col) && nzchar(id_col)) {
         pts_ifbl <- st_transform(pts, st_crs(ifbl_grid))

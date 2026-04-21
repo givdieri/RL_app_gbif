@@ -25,9 +25,6 @@ apt-get install -y \
   r-cran-stringdist \
   r-cran-jsonlite
 
-echo "[bootstrap] Attempting optional CRAN install for rgbif (used by fetch stage)..."
-Rscript -e "options(repos='https://cloud.r-project.org'); if (!requireNamespace('rgbif', quietly = TRUE)) install.packages('rgbif')" || true
-
 if command -v Rscript >/dev/null 2>&1; then
   echo "[bootstrap] Rscript ready: $(Rscript --version 2>&1)"
 else
