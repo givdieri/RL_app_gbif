@@ -4,6 +4,8 @@
 Use this skill for quick local verification that preprocessing and app-input generation work.
 
 ## Steps
+0. If `Rscript` is missing, run:
+   - `bash scripts/02_bootstrap_r_environment.sh`
 1. Run toy preprocess smoke test:
    - `RAW_OCC_PATH=main/toy_data/fungal_occurences_Vlaanderen.csv Rscript scripts/01_preprocess_redlist_input.R`
 2. Check generated files:

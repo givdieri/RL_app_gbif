@@ -24,6 +24,14 @@ Reproducible v1 pipeline for fungal Red List support in Flanders using **GBIF as
 1. Install R and required packages.
 2. From repository root, run fetch and preprocess scripts.
 
+If `Rscript` is missing in your environment, bootstrap with:
+
+```bash
+bash scripts/02_bootstrap_r_environment.sh
+```
+
+This installs `r-base-core` and apt-packaged dependencies used by preprocessing/app code, then attempts an optional CRAN install of `rgbif`.
+
 ## Run pipeline
 
 ### 1) Fetch GBIF occurrences

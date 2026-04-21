@@ -4,6 +4,7 @@
 Repository-level operating guide for agents working on `RL_app_gbif`.
 
 ## Preferred workflow
+0. If `Rscript` is unavailable, run `bash scripts/02_bootstrap_r_environment.sh`.
 1. Use `Rscript scripts/00_fetch_gbif_occurrences.R` to fetch GBIF data.
 2. Use `Rscript scripts/01_preprocess_redlist_input.R` to create app inputs.
 3. Use `Rscript -e "shiny::runApp('.')"` to launch the app.
