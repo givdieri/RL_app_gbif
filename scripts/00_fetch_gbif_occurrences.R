@@ -41,16 +41,18 @@ name_suggest_api <- function(name, limit = 20) {
   as_tibble(res)
 }
 
-occ_search_api <- function(taxonKey, limit = 300, start = 0, country = 'BE', hasCoordinate = TRUE) {
+occ_search_api <- function(taxonKey, limit = 300, start = 0, country = 'BE', hasCoordinate = TRUE, datasetKey = NULL) {
+  params <- list(
+    taxonKey = as.integer(taxonKey),
+    limit = as.integer(limit),
+    offset = as.integer(start),
+    country = country,
+    hasCoordinate = tolower(as.character(hasCoordinate))
+  )
+  if (!is.null(datasetKey) && nzchar(datasetKey)) params$datasetKey <- datasetKey
   gbif_get_json(
     '/occurrence/search',
-    params = list(
-      taxonKey = as.integer(taxonKey),
-      limit = as.integer(limit),
-      offset = as.integer(start),
-      country = country,
-      hasCoordinate = tolower(as.character(hasCoordinate))
-    )
+    params = params
   )
 }
 
@@ -186,7 +188,7 @@ resolve_taxa_gbif <- function(taxa_vec) {
   })
 }
 
-fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 300, max_pages = 10) {
+fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 300, max_pages = 10, dataset_keys = character(0)) {
   if (length(taxon_keys) == 0) {
     stop('fetch_occurrences_gbif: no taxon keys provided.')
   }
@@ -227,11 +229,34 @@ fetch_occurrences_gbif <- function(taxon_keys, geo_cfg, page_size = 300, max_pag
     }
   }
 
+  if (length(dataset_keys) > 0) {
+    for (ds in dataset_keys) {
+      for (key in taxon_keys) {
+        res_ds <- tryCatch(
+          occ_search_api(
+            taxonKey = key,
+            limit = min(page_size, 200),
+            start = 0,
+            hasCoordinate = TRUE,
+            country = geo_cfg$country,
+            datasetKey = ds
+          ),
+          error = function(e) e
+        )
+        if (inherits(res_ds, 'error')) next
+        dat_ds <- as_tibble(res_ds$results %||% tibble())
+        if (nrow(dat_ds) == 0) next
+        dat_ds <- dat_ds %>% mutate(requested_taxonKey = key, page = 1, supplemental_dataset = ds)
+        out[[length(out) + 1]] <- dat_ds
+      }
+    }
+  }
+
   if (length(out) == 0) {
     return(tibble())
   }
 
-  bind_rows(out)
+  bind_rows(out) %>% distinct(key, .keep_all = TRUE)
 }
 
 apply_flanders_filter <- function(df, geo_cfg) {
@@ -353,6 +378,15 @@ main <- function() {
 
   taxa_env <- Sys.getenv('GBIF_TAXA_CSV', unset = '')
   taxa <- if (nzchar(taxa_env)) str_split(taxa_env, ',')[[1]] |> str_trim() |> unique() else default_taxa
+  supplemental_dataset_env <- Sys.getenv(
+    'GBIF_SUPPLEMENTAL_DATASET_KEYS_CSV',
+    unset = '039f9753-1e6a-4ffc-83f9-daac3686d165,d6b42d28-ec58-4aba-9dab-332afda295b1'
+  )
+  supplemental_dataset_keys <- if (nzchar(supplemental_dataset_env)) {
+    str_split(supplemental_dataset_env, ',')[[1]] |> str_trim() |> unique()
+  } else {
+    character(0)
+  }
 
   if (length(taxa) == 0) stop('No taxa provided. Set GBIF_TAXA_CSV or edit default_taxa in script.')
 
@@ -399,7 +433,8 @@ main <- function() {
       taxon_keys = matched$occ_taxonKey,
       geo_cfg = geo_cfg,
       page_size = as.integer(Sys.getenv('GBIF_PAGE_SIZE', unset = 300)),
-      max_pages = as.integer(Sys.getenv('GBIF_MAX_PAGES', unset = 10))
+      max_pages = as.integer(Sys.getenv('GBIF_MAX_PAGES', unset = 10)),
+      dataset_keys = supplemental_dataset_keys
     )
   }
 
@@ -464,4 +499,3 @@ main <- function() {
 if (identical(environment(), globalenv())) {
   main()
 }
-warnings()

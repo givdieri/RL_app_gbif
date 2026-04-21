@@ -58,48 +58,60 @@ derive_analysis_grids <- function(clean_df) {
     floor(coords[, 2] / grid_size_m)
   )
 
-  discover_ifbl_grid_path <- function() {
+  discover_ifbl_grid_paths <- function() {
     env_path <- Sys.getenv('IFBL_GRID_PATH', unset = '')
-    if (nzchar(env_path)) return(env_path)
+    env_paths <- if (nzchar(env_path)) str_split(env_path, ';|,')[[1]] |> str_trim() else character(0)
+    env_paths <- env_paths[file.exists(env_paths)]
 
-    default_candidates <- c(
+    discovered <- c(
       file.path('spatial', 'ifbl_grid.shp'),
-      file.path('data_aux', 'ifbl', 'ifbl_grid.shp')
-    )
-    existing_default <- default_candidates[file.exists(default_candidates)]
-    if (length(existing_default) > 0) return(existing_default[[1]])
-
-    spatial_grid <- c(
+      file.path('spatial', 'ifbl_grid.kml'),
+      file.path('data_aux', 'ifbl', 'ifbl_grid.shp'),
+      file.path('data_aux', 'ifbl', 'ifbl_grid.kml'),
       list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE),
       list.files('spatial', pattern = '\\\\.kml$', full.names = TRUE)
     )
-    if (length(spatial_grid) > 0) return(spatial_grid[[1]])
-
-    ''
+    discovered <- unique(discovered[file.exists(discovered)])
+    unique(c(env_paths, discovered))
   }
 
-  ifbl_grid_path <- discover_ifbl_grid_path()
-  if (file.exists(ifbl_grid_path)) {
-    ifbl_grid <- tryCatch(st_read(ifbl_grid_path, quiet = TRUE), error = function(e) NULL)
-    if (!is.null(ifbl_grid)) {
-      id_candidates <- c('IFBL', 'ifbl_id', 'ifbl', 'CODE', 'code', 'GRID_ID', 'grid_id', 'Name', 'name')
-      id_col <- id_candidates[id_candidates %in% names(ifbl_grid)][1]
-      if (!is.na(id_col) && nzchar(id_col)) {
-        pts_ifbl <- st_transform(pts, st_crs(ifbl_grid))
-        joined <- suppressWarnings(st_join(pts_ifbl, ifbl_grid[, id_col, drop = FALSE], left = TRUE))
-        ifbl_id <- as.character(joined[[id_col]])
+  extract_ifbl_id <- function(grid_sf, preferred = c('uurhok', 'kwartier')) {
+    nm <- names(grid_sf)
+    id_candidates <- c('IFBL', 'ifbl_id', 'ifbl', 'CODE', 'code', 'GRID_ID', 'grid_id', 'Name', 'name')
+    id_col <- id_candidates[id_candidates %in% nm][1]
+    if (is.na(id_col) || !nzchar(id_col)) return(rep(NA_character_, nrow(kept)))
 
-        kept$ifbl_grid_id <- ifelse(is.na(ifbl_id) | ifbl_id == '', fallback_grid, ifbl_id)
-        kept$grid_source <- ifelse(is.na(ifbl_id) | ifbl_id == '', 'fallback_10km', 'ifbl_grid')
-        kept$grid_id <- kept$ifbl_grid_id
-        return(kept)
-      }
+    pts_ifbl <- st_transform(pts, st_crs(grid_sf))
+    joined <- suppressWarnings(st_join(pts_ifbl, grid_sf[, id_col, drop = FALSE], left = TRUE))
+    as.character(joined[[id_col]])
+  }
+
+  grid_paths <- discover_ifbl_grid_paths()
+  kept$ifbl_uurhok <- NA_character_
+  kept$ifbl_kwartier <- NA_character_
+
+  if (length(grid_paths) > 0) {
+    for (p in grid_paths) {
+      grid_sf <- tryCatch(st_read(p, quiet = TRUE), error = function(e) NULL)
+      if (is.null(grid_sf) || nrow(grid_sf) == 0) next
+
+      id_vals <- extract_ifbl_id(grid_sf)
+      if (all(is.na(id_vals) | id_vals == '')) next
+
+      path_lc <- tolower(basename(p))
+      target_col <- if (str_detect(path_lc, 'kwartier|1x1|kml')) 'ifbl_kwartier' else 'ifbl_uurhok'
+      fill_idx <- is.na(kept[[target_col]]) | kept[[target_col]] == ''
+      kept[[target_col]][fill_idx] <- id_vals[fill_idx]
     }
   }
 
-  kept$ifbl_grid_id <- fallback_grid
-  kept$grid_source <- 'fallback_10km'
-  kept$grid_id <- fallback_grid
+  kept$ifbl_grid_id <- dplyr::coalesce(kept$ifbl_kwartier, kept$ifbl_uurhok, fallback_grid)
+  kept$grid_source <- dplyr::case_when(
+    !is.na(kept$ifbl_kwartier) & kept$ifbl_kwartier != '' ~ 'ifbl_kwartier',
+    !is.na(kept$ifbl_uurhok) & kept$ifbl_uurhok != '' ~ 'ifbl_uurhok',
+    TRUE ~ 'fallback_10km'
+  )
+  kept$grid_id <- kept$ifbl_grid_id
 
   kept
 }

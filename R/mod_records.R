@@ -9,7 +9,7 @@ mod_records_server <- function(id, records_reactive, analysis_reactive, species_
       req(records_reactive(), analysis_reactive(), species_reactive())
 
       ifbl_lookup <- analysis_reactive() |>
-        dplyr::select(record_id, ifbl_grid_id, grid_source, grid_id) |>
+        dplyr::select(record_id, ifbl_grid_id, ifbl_uurhok, ifbl_kwartier, grid_source, grid_id) |>
         dplyr::distinct()
 
       records_reactive() |>
@@ -28,6 +28,8 @@ mod_records_server <- function(id, records_reactive, analysis_reactive, species_
           decimalLongitude,
           decimalLatitude,
           ifbl_grid_id,
+          ifbl_uurhok,
+          ifbl_kwartier,
           grid_id,
           grid_source,
           source_dataset,

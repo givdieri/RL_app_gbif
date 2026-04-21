@@ -48,6 +48,8 @@ GBIF_TAXA_CSV="Amanita muscaria,Amanita citrina" Rscript scripts/00_fetch_gbif_o
 Rscript scripts/00_fetch_gbif_occurrences.R
 ```
 
+To force/adjust supplemental dataset sampling, set `GBIF_SUPPLEMENTAL_DATASET_KEYS_CSV` (comma-separated GBIF dataset keys).
+
 Outputs:
 
 - `data_raw/gbif/occurrences_raw.csv`
