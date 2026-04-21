@@ -50,14 +50,53 @@ derive_analysis_grids <- function(clean_df) {
 
   pts <- st_as_sf(kept, coords = c('decimalLongitude', 'decimalLatitude'), crs = 4326, remove = FALSE)
   merc <- st_transform(pts, 3857)
-
   coords <- st_coordinates(merc)
   grid_size_m <- 10000
 
-  kept$grid_id <- paste0(
+  fallback_grid <- paste0(
     floor(coords[, 1] / grid_size_m), '_',
     floor(coords[, 2] / grid_size_m)
   )
+
+  discover_ifbl_grid_path <- function() {
+    env_path <- Sys.getenv('IFBL_GRID_PATH', unset = '')
+    if (nzchar(env_path)) return(env_path)
+
+    default_candidates <- c(
+      file.path('spatial', 'ifbl_grid.shp'),
+      file.path('data_aux', 'ifbl', 'ifbl_grid.shp')
+    )
+    existing_default <- default_candidates[file.exists(default_candidates)]
+    if (length(existing_default) > 0) return(existing_default[[1]])
+
+    spatial_shp <- list.files('spatial', pattern = '\\\\.shp$', full.names = TRUE)
+    if (length(spatial_shp) > 0) return(spatial_shp[[1]])
+
+    ''
+  }
+
+  ifbl_grid_path <- discover_ifbl_grid_path()
+  if (file.exists(ifbl_grid_path)) {
+    ifbl_grid <- tryCatch(st_read(ifbl_grid_path, quiet = TRUE), error = function(e) NULL)
+    if (!is.null(ifbl_grid)) {
+      id_candidates <- c('IFBL', 'ifbl_id', 'ifbl', 'CODE', 'code', 'GRID_ID', 'grid_id')
+      id_col <- id_candidates[id_candidates %in% names(ifbl_grid)][1]
+      if (!is.na(id_col) && nzchar(id_col)) {
+        pts_ifbl <- st_transform(pts, st_crs(ifbl_grid))
+        joined <- suppressWarnings(st_join(pts_ifbl, ifbl_grid[, id_col, drop = FALSE], left = TRUE))
+        ifbl_id <- as.character(joined[[id_col]])
+
+        kept$ifbl_grid_id <- ifelse(is.na(ifbl_id) | ifbl_id == '', fallback_grid, ifbl_id)
+        kept$grid_source <- ifelse(is.na(ifbl_id) | ifbl_id == '', 'fallback_10km', 'ifbl_grid')
+        kept$grid_id <- kept$ifbl_grid_id
+        return(kept)
+      }
+    }
+  }
+
+  kept$ifbl_grid_id <- fallback_grid
+  kept$grid_source <- 'fallback_10km'
+  kept$grid_id <- fallback_grid
 
   kept
 }

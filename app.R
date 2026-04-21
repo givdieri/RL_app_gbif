@@ -3,6 +3,7 @@ suppressPackageStartupMessages({
   library(DT)
   library(dplyr)
   library(purrr)
+  library(ggplot2)
 })
 
 source('R/helpers_data.R')
@@ -41,7 +42,7 @@ server <- function(input, output, session) {
   settings <- mod_settings_server('settings', app_data$settings_defaults)
 
   mod_records_server('records', reactive(app_data$records_clean), selected_species)
-  mod_maps_server('maps', reactive(app_data$records_analysis), selected_species)
+  mod_maps_server('maps', reactive(app_data$records_analysis), selected_species, settings)
 
   criterion_result <- mod_criterion_a_server(
     'criterion_a',

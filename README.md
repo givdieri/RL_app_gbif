@@ -59,6 +59,10 @@ To preprocess an alternative raw file (e.g. toy/demo data), set `RAW_OCC_PATH`:
 RAW_OCC_PATH=main/toy_data/fungal_occurences_Vlaanderen.csv Rscript scripts/01_preprocess_redlist_input.R
 ```
 
+Optional IFBL grid translation: set `IFBL_GRID_PATH` to an IFBL grid shapefile (`.shp`).
+If `IFBL_GRID_PATH` is not set, preprocessing first checks `./spatial/ifbl_grid.shp`, then `data_aux/ifbl/ifbl_grid.shp`, then any `.shp` in `./spatial/`.
+If a grid is present and readable, records are assigned IFBL grid IDs by spatial join; otherwise the script falls back to 10x10km projected grid IDs.
+
 Outputs:
 
 - `app_data/records_clean.rds`
@@ -91,7 +95,7 @@ Defaults:
 ## Known limitations
 
 - Flanders boundary uses a simple polygon approximation by default in v1.
-- Grid derivation currently uses projected 10x10 km cell indexing; IFBL-native mapping is not yet implemented.
+- IFBL-native mapping requires a local IFBL grid shapefile (`IFBL_GRID_PATH`); without it the workflow falls back to projected 10x10 km grid indexing.
 - GBIF pagination uses `occ_search`; for very large production runs, a formal GBIF download workflow can be added later.
 - Final categories are expert-reviewed; app output is provisional support.
 - GBIF API access requires outbound network permission to `api.gbif.org`; restrictive proxies can block fetch calls.
